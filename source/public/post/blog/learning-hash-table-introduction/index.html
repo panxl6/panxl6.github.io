@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>教你从零开始写一个哈希表--导读 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/learning-hash-table-introduction/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="教你从零开始写一个哈希表--导读" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/learning-hash-table-introduction/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="教你从零开始写一个哈希表--导读">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="1010">
+
+
+
+<meta itemprop="keywords" content="哈希表,数据结构," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="教你从零开始写一个哈希表--导读"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">教你从零开始写一个哈希表--导读</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"> 数据结构 </a>
+            </div>
+          <span class="more-meta"> 约 1010 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#api">API</a></li>
+<li><a href="#安装">安装</a></li>
+<li><a href="#代码结构">代码结构</a></li>
+<li><a href="#术语">术语</a></li>
+<li><a href="#友情链接">友情链接</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>&emsp;&emsp;哈希表是一个可以提供快速实现关联数组API的数据结构。跟“哈希表”有关的一些术语也许有些让人产生困惑，因此我在下文列了一些摘要。
+&emsp;&emsp;哈希表由一系列的桶组成，每一个桶保存一个键值对。为了找到存放键值对的桶，关键字要传递给哈希函数。哈希函数返回一个指明桶数组下标的整数。当我们想要查询一个键值对时，我们对哈希函数使用同样的关键字，接收哈希函数返回的数组下标，再使用下标找到键值对在桶数组的位置。
+&emsp;&emsp;数组寻址的算法复杂度是<code>O(1)</code>，这使得哈希表在保存和查询数据时非常的快。
+&emsp;&emsp;我们的哈希表将会把字符串关键字映射为字符串的（ASCII码中对应的）值，但理论上哈希表可以将任意的关键字映射为任意的值类型。我们这里只支持ASCII字符串，支持unicode并不是关键的点，而且也超出了本教程的讨论范围。</p>
+
+<h3 id="api">API</h3>
+
+<p>&emsp;&emsp;关联数组是无序键值对的集合。它不允许出现重复的关键字。受支持的操作如下：
+- <code>search(a, k)</code>：从关联数组<code>a</code>中返回跟关键字<code>k</code>关联的值<code>v</code>；如果关键字不存在，返回<code>NULL</code>
+- <code>insert(a, k, v)</code>：将<code>k:v</code>键值对保存到关联数组<code>a</code>中
+- <code>delete(a, k)</code>：删除跟关键字<code>k</code>关联的键值对<code>k:v</code>;如果关键字<code>k</code>不存在，不做任何操作</p>
+
+<h3 id="安装">安装</h3>
+
+<p>&emsp;&emsp;安装C语言(开发环境)，请参考Daniel Holden的《Build Your Own Lisp》一书给出的指引。这本书非常的棒，我建议你通读全书。</p>
+
+<h3 id="代码结构">代码结构</h3>
+
+<p>&emsp;&emsp;代码放在以下目录结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.
+├── build
+└── src
+    ├── hash_table.c
+    ├── hash_table.h
+    ├── prime.c
+    └── prime.h</pre></td></tr></table>
+</div>
+</div>
+<p><code>src</code>目录包含了所有代码，<code>build</code>目录包含了我们编译后的二进制文件。</p>
+
+<h3 id="术语">术语</h3>
+
+<p>&emsp;&emsp;这里有一些可以互相替换的名词。具体如下：
+- 关联数组：实现了上文所讲的API的抽象数据结构。它也叫做映射、符号表或者字典。
+- 哈希表：关联数组使用哈希函数的快速实现。它也叫做哈希映射、哈希或者字典。</p>
+
+<p>&emsp;&emsp;关联数组可以通过许多不同的底层数据结构来实现。一个（不考虑性能的）实现是通过简单的把数据保存在数据中，然后通过遍历数组来搜索。关联数组和哈希表往往会让人产生困惑，因为关联数组一般是由哈希表实现的。</p>
+
+<h3 id="友情链接">友情链接</h3>
+
+<ul>
+<li><a href="https://github.com/panxl6/blog/blob/master/Write-hashtable-in-php/HashTable.php">PHP版本的简易实现</a></li>
+<li><a href="https://leetcode.com/problems/design-hashmap/">LeetCode系统设计题：实现一个哈希表</a></li>
+</ul>
+
+<p><em>上一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84846229">教你从零开始写一个哈希表</a>
+<em>下一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84981059">教你从零开始写一个哈希表&ndash;哈希表结构</a></p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/learning-hash-table-structure/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">教你从零开始写一个哈希表--哈希表结构</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/learning-hash-table-hash-function/">
+            <span class="next-text nav-default">教你从零开始写一个哈希表--调整大小</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>代码重定向 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="代码迁移和维护的一些技巧。
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/code-redirect/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="代码重定向" />
+<meta property="og:description" content="代码迁移和维护的一些技巧。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/code-redirect/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="代码重定向">
+<meta itemprop="description" content="代码迁移和维护的一些技巧。">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="1373">
+
+
+
+<meta itemprop="keywords" content="维护," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="代码重定向"/>
+<meta name="twitter:description" content="代码迁移和维护的一些技巧。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">代码重定向</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        
+          <span class="more-meta"> 约 1373 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#类的层面">类的层面</a></li>
+<li><a href="#函数的层面">函数的层面</a></li>
+<li><a href="#变量的层面">变量的层面</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>代码迁移和维护的一些技巧。</p>
+
+<p>&emsp;&emsp;我们平常说的重定向，是指网址重定向。
+&emsp;&emsp;比如，当年的京东网址是<a href="360buy.com">360buy.com</a>，后来升级成了<a href="jd.com">jd.com</a>。不知道的用户肯定还记着旧的网址，那怎么办呢？我们就把访问<a href="360buy.com">360buy.com</a>的用户重定向到<a href="jd.com">jd.com</a>。
+&emsp;&emsp;在代码维护的过程中，我们可能也会遇到给运行中汽车换轮胎这样棘手的问题。
+&emsp;&emsp;随着功能的迭代，可能版本1的代码和版本2的代码有了较大的差异，版本1的代码已经有其他程序员在用了，但是版本2的代码又必须上。把版本1的代码打包服务化吧，或者我们推倒重构吧。这样的方式代价有点大。在这个过渡阶段，我们就可以借鉴网址重定向的思路。</p>
+
+<h3 id="类的层面">类的层面</h3>
+
+<p>&emsp;&emsp;项目初期，很多代码都是放在一个目录下的（单体应用）。随着业务的发展，某些基础代码可能要做为服务化做准备了；某些业务可能要分家了。
+  <img src="https://img-blog.csdn.net/20180814084136890?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BhbnhsNg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" />
+&emsp;&emsp;这里以一个电商的项目为例：
+&emsp;&emsp;当业务还小的时候订单系统就一个文件。但是当业务规模变大，里面的每个文件都变得非常大，可能有5000行以上的代码。这个时候就需要重构或者拆分代码了。
+<img src="https://img-blog.csdn.net/20180814085404721?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BhbnhsNg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" />
+&emsp;&emsp;让原有的Home\DealLogic继承Deal\DealLogic,Home\DealLogic变成了一个空文件，并没有实际的代码。所有的逻辑都迁移到了Deal目录下。通过类的继承，把所有对Home\DealLogic的调用都路由到了Deal\DealLogic。新旧代码之间依然有交互的地方，就让Deal\DealLogic分发到Deal下面的逻辑。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">	// Home目录下的源文件
+	class HomeDeal{
+		function  A
+		function B
+		...
+	}
+
+	class DealDealLogic {
+		function A
+		function B
+		...
+	}
+	
+	// 重定向之后
+	class HomeDealLogic extends DealDealLogic {
+		// nothing
+	}
+	</pre></td></tr></table>
+</div>
+</div>
+<h3 id="函数的层面">函数的层面</h3>
+
+<p>&emsp;&emsp;某个函数版本1和版本2的增量改动比较大，维护的时候怎么办呢？
+&emsp;&emsp;起两个名字吧，<code>function v1</code>以及<code>function v2</code>。v1继续用，新的业务就用v2嘛。但是如果v2跟v1是向下兼容的呢，而且v2里面有很多代码跟v1是兼容的，那岂不是有很多的冗余代码?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">function v1 {
+	// 实现功能1
+}
+
+function v2 {
+	// 实现功能1
+	// 实现功能2
+}</pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;如果你的函数是一个个参数进行传递的，那你可能要增加一个路由参数version。如果你传递的参数是一个对象那就在对象里面增加一个属性，上层改动不大，向下兼容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">function v1(version) {
+	// 实现功能1
+	if (version == 2) {
+		// 实现功能2
+	}
+}</pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;但是随着业务的迭代，增量功能的差异非常大的时候，想要剥离出去呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">function v1(version) {
+	// 实现功能1
+	if (version == 2) {
+		// 路由到v2函数
+		return v2()
+	}
+}
+
+function v1(version) {
+	// 实现功能2
+}</pre></td></tr></table>
+</div>
+</div>
+<p>再比如linux系统的文件API中的open函数和creat函数的关系:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">creat</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">O_WRONLY</span><span class="o">|</span><span class="n">O_CREAT</span><span class="o">|</span><span class="n">O_TRUNC</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span><span class="k">return</span> <span class="n">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">O_WRONLY</span><span class="o">|</span><span class="n">O_CREAT</span><span class="o">|</span><span class="n">O_TRUNC</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="变量的层面">变量的层面</h3>
+
+<p>&emsp;&emsp;有时候，我们可能把某个变量的名称拼写错了;或者变量太多了，零零散散，想把它封装成对象;又或者我们想通过getter增加其他的转换或功能等等。但是原本的变量名称已经被很多其他同事在使用了，怎么办呢？
+&emsp;&emsp;在C++里面有个取别名的功能，新的名字跟旧的名字指向同一个引用。</p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BB%B4%E6%8A%A4/">维护</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">主键和唯一索引</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/the-difference-maintain-of-development-enviroment/">
+            <span class="next-text nav-default">开发环境的两种维护方式比较</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

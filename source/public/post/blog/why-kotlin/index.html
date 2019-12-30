@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>为什么你应该完全切换到Kotlin？ - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="是时候开始使用现代的编程语言了!
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/why-kotlin/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="为什么你应该完全切换到Kotlin？" />
+<meta property="og:description" content="是时候开始使用现代的编程语言了!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/why-kotlin/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="为什么你应该完全切换到Kotlin？">
+<meta itemprop="description" content="是时候开始使用现代的编程语言了!">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="3222">
+
+
+
+<meta itemprop="keywords" content="翻译,kotlin," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="为什么你应该完全切换到Kotlin？"/>
+<meta name="twitter:description" content="是时候开始使用现代的编程语言了!"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">为什么你应该完全切换到Kotlin？</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        
+          <span class="more-meta"> 约 3222 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>是时候开始使用现代的编程语言了!</p>
+
+<blockquote>
+<p>是时候开始使用现代的编程语言了!</p>
+</blockquote>
+
+<p>　我想告诉你一门叫做<strong>Kotlin</strong>的新的编程语言，以及为什么你应该为你的下一个项目考虑它。我过去钟爱于Java。但是去年，我发现我无论什么时候我都在尽可能的用Kotlin进行编程。基于这一点，我真的想不出任何一个Java会成为更好的选择的情形。</p>
+
+<p>　Kotlin是由<strong>JetBrains</strong>开发的。事实上，是IDE（诸如<strong>IntelliJ</strong>和<strong>ReSharper</strong>）套件背后的人们让Kotlin闪闪发光的。它非常的优雅，非常的简洁。它让编程成为一种惬意和高效的体验。</p>
+
+<p>尽管Kotlin可以编译成<strong>JavaScript</strong>和机器码，但是我会关注于它的主要环境：<strong>JVM</strong>。</p>
+
+<p>因此，这里有一大堆理由，为什么你应该完全切换到Kotlin（而不是出于某种命令）：</p>
+
+<h2 id="0-java互操作性">0# Java互操作性</h2>
+
+<p>　Kotlin是100%可以和Java互操作的。你可以继续在你的Java遗留项目中使用Kotlin。所有你喜欢的<strong>Java框架依然是可用的</strong>。无论你用Kotlin编写什么样的框架，你的Java死忠朋友都会愉快的接受。</p>
+
+<h2 id="1-熟悉的语法">1# 熟悉的语法</h2>
+
+<p>　Kotlin不是某些为学术而生的怪异语言。它的语法对任何来自OOP（面向对象编程）领域的程序员来说都是熟悉的。对于入门者而言，或多或少是容易理解的。当然，它也有跟Java不一样的东西。比如，重新设计的构造函数和<code>val</code>、<code>var</code>变量声明。下面展示的代码大部分是基础的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+
+    <span class="k">val</span> <span class="py">b</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&#34;b&#34;</span>     <span class="c1">// val means unmodifiable
+</span><span class="c1"></span>    <span class="k">var</span> <span class="py">i</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>          <span class="c1">// var means modifiable
+</span><span class="c1"></span>
+    <span class="k">fun</span> <span class="nf">hello</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">val</span> <span class="py">str</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span>
+        <span class="n">print</span><span class="p">(</span><span class="s">&#34;$str World&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">maxOf</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Float</span><span class="p">)</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="p">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">a</span> <span class="k">else</span> <span class="n">b</span>
+
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="2-字符串插入">2# 字符串插入</h2>
+
+<p>它好像是Java版的<code>String.format()</code>。但是它更加智能、更为可读。而且内置进了语言里面：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">4</span>
+<span class="k">val</span> <span class="py">y</span> <span class="p">=</span> <span class="m">7</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&#34;sum of $x and $y is ${x + y}&#34;</span><span class="p">)</span>  <span class="c1">// sum of 4 and 7 is 11</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="3-类型推断">3# 类型推断</h2>
+
+<p>Kotlin会推断你对类型，无论在什么地方，你都会感觉到它会提升代码的可读性：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">a</span> <span class="p">=</span> <span class="s">&#34;abc&#34;</span>                         <span class="c1">// type inferred to String
+</span><span class="c1"></span><span class="k">val</span> <span class="py">b</span> <span class="p">=</span> <span class="m">4</span>                             <span class="c1">// type inferred to Int
+</span><span class="c1"></span>
+<span class="k">val</span> <span class="py">c</span><span class="p">:</span> <span class="n">Double</span> <span class="p">=</span> <span class="m">0.7</span>                   <span class="c1">// type declared explicitly
+</span><span class="c1"></span><span class="k">val</span> <span class="py">d</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">ArrayList</span><span class="p">()</span>     <span class="c1">// type declared explicitly</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="4-智能类型转换">4# 智能类型转换</h2>
+
+<p>Kotlin编译器会跟踪你的代码逻辑。如果可能的话，它会自动转换类型。这意味着<code>instanceof</code>检查后面不需要显式的类型转换了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">if</span> <span class="p">(</span><span class="n">obj</span> <span class="k">is</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">toUpperCase</span><span class="p">())</span>     <span class="c1">// obj is now known to be a String
+</span><span class="c1"></span><span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="5-直观的等价性判断">5# 直观的等价性判断</h2>
+
+<p>你可以不再显式的调用<code>equals()</code>了。因为现在<code>==</code>操作符会检查结构的等价性了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">john1</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">&#34;John&#34;</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">john2</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">&#34;John&#34;</span><span class="p">)</span>
+<span class="n">john1</span> <span class="p">==</span> <span class="n">john2</span>    <span class="c1">// true  (structural equality)
+</span><span class="c1"></span><span class="n">john1</span> <span class="p">===</span> <span class="n">john2</span>   <span class="c1">// false (referential equality)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="6-默认参数">6# 默认参数</h2>
+
+<p>你不需要定义多个参数不同的相似方法了（不需要函数重载了）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">build</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">800</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">600</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Frame</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="7-命名参数">7#  命名参数</h2>
+
+<p>跟默认参数一起（使用），命名参数消灭了对建造者的需求：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">build</span><span class="p">(</span><span class="s">&#34;PacMan&#34;</span><span class="p">,</span> <span class="m">400</span><span class="p">,</span> <span class="m">300</span><span class="p">)</span>                           <span class="c1">// equivalent
+</span><span class="c1"></span><span class="n">build</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="s">&#34;PacMan&#34;</span><span class="p">,</span> <span class="n">width</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="m">300</span><span class="p">)</span>  <span class="c1">// equivalent
+</span><span class="c1"></span><span class="n">build</span><span class="p">(</span><span class="n">width</span> <span class="p">=</span> <span class="m">400</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="m">300</span><span class="p">,</span> <span class="n">title</span> <span class="p">=</span> <span class="s">&#34;PacMan&#34;</span><span class="p">)</span>  <span class="c1">// equivalent</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="8-when表达式">8# When表达式</h2>
+
+<p><code>switch...case...</code>被更加可读、更加灵活的<code>when</code>表达式替换了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">when</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&#34;x is 1&#34;</span><span class="p">)</span>
+    <span class="m">2</span> <span class="p">-&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&#34;x is 2&#34;</span><span class="p">)</span>
+    <span class="m">3</span><span class="p">,</span> <span class="m">4</span> <span class="p">-&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&#34;x is 3 or 4&#34;</span><span class="p">)</span>
+    <span class="k">in</span> <span class="m">5.</span><span class="p">.</span><span class="m">10</span> <span class="p">-&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&#34;x is 5, 6, 7, 8, 9, or 10&#34;</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">print</span><span class="p">(</span><span class="s">&#34;x is out of range&#34;</span><span class="p">)</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>它可以用作表达式，也可以用作语句。它可以有参数，也可以不带参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">res</span><span class="p">:</span> <span class="n">Boolean</span> <span class="p">=</span> <span class="k">when</span> <span class="p">{</span>
+    <span class="n">obj</span> <span class="p">==</span> <span class="k">null</span> <span class="p">-&gt;</span> <span class="k">false</span>
+    <span class="n">obj</span> <span class="k">is</span> <span class="n">String</span> <span class="p">-&gt;</span> <span class="k">true</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="k">throw</span> <span class="n">IllegalStateException</span><span class="p">()</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="9-属性">9# 属性</h2>
+
+<p>你可以添加定制的<code>set</code>和<code>get</code>行为到公开的字段中。这意味着不再有毫无意义的<code>getter</code>和<code>setter</code>让我们的代码膨胀了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">class</span> <span class="nc">Frame</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="py">width</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">800</span>
+    <span class="k">var</span> <span class="py">height</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">600</span>
+
+    <span class="k">val</span> <span class="py">pixels</span><span class="p">:</span> <span class="n">Int</span>
+        <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">width</span> <span class="p">*</span> <span class="n">height</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="10-数据类">10# 数据类</h2>
+
+<p>数据类是一个包含了`<code>toString()</code>, <code>equals()</code>, <code>hashCode()</code>,和 <code>copy()</code>的<code>POJO</code>。不同于Java的是，它不会超过100行代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">data</span> <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+                  <span class="k">var</span> <span class="py">email</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+                  <span class="k">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span>
+
+<span class="k">val</span> <span class="py">john</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">&#34;John&#34;</span><span class="p">,</span> <span class="s">&#34;john@gmail.com&#34;</span><span class="p">,</span> <span class="m">112</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="11-操作符重载">11# 操作符重载</h2>
+
+<p>预定义的操作符合集可以被重载以提升可读性：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">data</span> <span class="k">class</span> <span class="nc">Vec</span><span class="p">(</span><span class="k">val</span> <span class="py">x</span><span class="p">:</span> <span class="n">Float</span><span class="p">,</span> <span class="k">val</span> <span class="py">y</span><span class="p">:</span> <span class="n">Float</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">plus</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">Vec</span><span class="p">)</span> <span class="p">=</span> <span class="n">Vec</span><span class="p">(</span><span class="n">x</span> <span class="p">+</span> <span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">+</span> <span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">val</span> <span class="py">v</span> <span class="p">=</span> <span class="n">Vec</span><span class="p">(</span><span class="m">2f</span><span class="p">,</span> <span class="m">3f</span><span class="p">)</span> <span class="p">+</span> <span class="n">Vec</span><span class="p">(</span><span class="m">4f</span><span class="p">,</span> <span class="m">1f</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="12-析构函数声明">12# 析构函数声明</h2>
+
+<p>某些对象可以被销毁。比如，这对迭代映射(<code>map</code>)非常管用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">for</span> <span class="p">((</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">map</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;Key: $key&#34;</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;Value: $value&#34;</span><span class="p">)</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="13-范围">13# 范围</h2>
+
+<p>为了可读性：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">1.</span><span class="p">.</span><span class="m">100</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">0</span> <span class="n">until</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">2.</span><span class="p">.</span><span class="m">10</span> <span class="n">step</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">10</span> <span class="n">downTo</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="k">in</span> <span class="m">1.</span><span class="p">.</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="14-扩展函数">14# 扩展函数</h2>
+
+<p>　还记得你第一次使用Java对一个<code>List</code>对象进行排序的情形吗？你找不到<code>sort</code>函数。所以你必须问你的导师或者向Google学习<code>Collections.sort()</code>。之后，当你必须把一个<code>String</code>对象转换为大写时，你编写了自己的助手函数。因为你并不知道<code>StringUtils.capitalize()</code>这个函数。</p>
+
+<p>如果有一种方法来添加新的函数到旧的类中，那么这个方法就是你的IDE能够在代码填充的时候帮你找到正确的函数。在Kotlin中，你完全可以这样做：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">String</span><span class="p">.</span><span class="n">replaceSpaces</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">,</span> <span class="sc">&#39;_&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">val</span> <span class="py">formatted</span> <span class="p">=</span> <span class="n">str</span><span class="p">.</span><span class="n">replaceSpaces</span><span class="p">()</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Kotlin标准库扩展了Java原始类型的功能。这是<code>String</code>特别需要的啊：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">str</span><span class="p">.</span><span class="n">removeSuffix</span><span class="p">(</span><span class="s">&#34;.txt&#34;</span><span class="p">)</span>
+<span class="n">str</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="n">str</span><span class="p">.</span><span class="n">substringAfterLast</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">)</span>
+<span class="n">str</span><span class="p">.</span><span class="n">replaceAfter</span><span class="p">(</span><span class="s">&#34;:&#34;</span><span class="p">,</span> <span class="s">&#34;classified&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="15-空指针安全">15# 空指针安全</h2>
+
+<p>　我们经常把Java佳作是一个静态类型的语言。它里面的<code>String</code>类型的变量并不能保证指向一个<code>String</code>对象。它可能指向<code>null</code>。尽管我们以往经常这么做，但是它被静态类型检查否定了。结果，Java开发者被迫活在永久的<a href="https://stackoverflow.com/questions/218384/what-is-a-nullpointerexception-and-how-do-i-fix-it"><code>NullPointerException</code></a>恐惧中。</p>
+
+<p>Kotlin通过区分<strong>不为空类型</strong>和<strong>为空的类型</strong>来解决这个问题。类型默认是不为空的。但是可以通过添加<code>?</code>来使其可为空。就像这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">var</span> <span class="py">a</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&#34;abc&#34;</span>
+<span class="n">a</span> <span class="p">=</span> <span class="k">null</span>                <span class="c1">// compile error
+</span><span class="c1"></span>
+<span class="k">var</span> <span class="py">b</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s">&#34;xyz&#34;</span>
+<span class="n">b</span> <span class="p">=</span> <span class="k">null</span>                <span class="c1">// no problem</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Kotlin强迫你无论在什么时候访问一个可为空的类型，都要提防<strong>NPE</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="n">b</span><span class="p">.</span><span class="n">length</span>        <span class="c1">// compile error: b might be null</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>然而，有时候这看起来可能有点多余了。但多少要感谢一下这个特性。我们依然会有智能类型转换。无论何时，尽可能把可为空的类型转换为不为空的类型的智能转换：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span>
+<span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="n">b</span><span class="p">.</span><span class="n">length</span>        <span class="c1">// no problem</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>我们也可以使用安全调用<code>?.</code>。它会当做空指针而不是抛出<strong>NPE</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="n">b</span><span class="o">?.</span>       <span class="c1">// type of x is nullable Int</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>　安全调用可以链在一起。这样可以避免嵌套的<code>if not null</code>检查。我们有时候在其他的语言中会这么写。如果我们想要一个别的默认值，而不是<code>null</code>，我们可以使用三元操作符<code>?:</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">name</span> <span class="p">=</span> <span class="n">ship</span><span class="o">?.</span><span class="n">captain</span><span class="o">?.</span><span class="n">name</span> <span class="o">?:</span> <span class="s">&#34;unknown&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>如果以上没有一个你喜欢的，你绝对需要一个NPE！你将不得不显式的询问：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="n">b</span><span class="o">?.</span><span class="n">length</span> <span class="o">?:</span> <span class="k">throw</span> <span class="n">NullPointerException</span><span class="p">()</span>  <span class="c1">// same as below
+</span><span class="c1"></span><span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="n">b</span><span class="o">!!</span><span class="p">.</span><span class="n">length</span>                                 <span class="c1">// same as above</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="16-更好的lambda">16# 更好的Lambda</h2>
+
+<p>嘿，伙计，这是一个不错的lambda系统&ndash;完美的平衡了可读性和简洁性。感谢那些明智的语言设计选择吧！语法直接了当：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">sum</span> <span class="p">=</span> <span class="p">{</span> <span class="n">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Int</span> <span class="p">-&gt;</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span> <span class="p">}</span>   <span class="c1">// type: (Int, Int) -&gt; Int
+</span><span class="c1"></span><span class="k">val</span> <span class="py">res</span> <span class="p">=</span> <span class="n">sum</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">)</span>                      <span class="c1">// res == 11</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>来看看明智在哪里：</p>
+
+<ol>
+<li>如果lambda放在最后或者方法只有一个参数，你可以移除方法调用的圆括号。</li>
+<li>如果我们选择不去什么单一参数的lambda的参数，它的默认名字为<code>it</code>。</li>
+</ol>
+
+<p>上面的描述合起来就是下面的三行代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">numbers</span><span class="p">.</span><span class="n">filter</span><span class="p">({</span> <span class="n">x</span> <span class="p">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">isPrime</span><span class="p">()</span> <span class="p">})</span>
+<span class="n">numbers</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">x</span> <span class="p">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">isPrime</span><span class="p">()</span> <span class="p">}</span>
+<span class="n">numbers</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">isPrime</span><span class="p">()</span> <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这可以让我们编写更加精简的函数式代码&ndash;来看看它的动人之处吧：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">persons</span>
+    <span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">sortedBy</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">name</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">email</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">print</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Kotlin的lambda系统加上了扩展函数，使得它成为创建DSL的理想选择。检出增强Android开发的Anko代码作为DSL的案例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">verticalLayout</span> <span class="p">{</span>
+    <span class="n">padding</span> <span class="p">=</span> <span class="n">dip</span><span class="p">(</span><span class="m">30</span><span class="p">)</span>
+    <span class="n">editText</span> <span class="p">{</span>
+        <span class="n">hint</span> <span class="p">=</span> <span class="err">“</span><span class="n">Name</span><span class="err">”</span>
+        <span class="n">textSize</span> <span class="p">=</span> <span class="m">24f</span>
+    <span class="p">}</span>
+    <span class="n">editText</span> <span class="p">{</span>
+        <span class="n">hint</span> <span class="p">=</span> <span class="err">“</span><span class="n">Password</span><span class="err">”</span>
+        <span class="n">textSize</span> <span class="p">=</span> <span class="m">24f</span>
+    <span class="p">}</span>
+    <span class="n">button</span><span class="p">(</span><span class="err">“</span><span class="n">Login</span><span class="err">”</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">textSize</span> <span class="p">=</span> <span class="m">26f</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="17-ide支持">17# IDE支持</h2>
+
+<p>如果你想上手Kotlin，你有多个选择。但是我强烈推荐使用配套了Kotlin的IntelliJ。它的特性解释了编程语言语言和IDE的设计者为同一批人的好处。</p>
+
+<p>就给你一个小而美的例子吧！当我第一次从Stack Overflow复制Java代码时，它会弹出（这样的对话框）：</p>
+
+<p>[外链图片转存失败(img-Xx5zcs7s-1567385527248)(<a href="https://cdn-images-1.medium.com/max/1600/1*zpE0UpuBDGW7Mk-Vtx2uKw.png)">https://cdn-images-1.medium.com/max/1600/1*zpE0UpuBDGW7Mk-Vtx2uKw.png)</a>]</p>
+
+<p><strong>扩展阅读：</strong></p>
+
+<ul>
+<li><p><a href="https://github.com/panxl6/Kotlin-in-action"><strong>《Kotlin实战》</strong></a></p></li>
+
+<li><p><a href="https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/"><strong>Kotlin on Android. Now official</strong></a></p></li>
+
+<li><p><a href="https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3"><strong>Why Kotlin is my next programming language</strong></a></p></li>
+
+<li><p><a href="https://agilewombat.com/2016/02/01/scala-vs-kotlin/"><strong>Scala vs Kotlin</strong></a></p></li>
+
+<li><p><a href="http://nilhcem.com/swift-is-like-kotlin/"><strong>Swift is like Kotlin</strong></a></p></li>
+
+<li><p><a href="https://blog.gradle.org/kotlin-scripting-update"><strong>The Road to Gradle Script Kotlin 1.0</strong></a></p></li>
+
+<li><p><a href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0?utm_content=buffer546ec&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"><strong>Introducing Kotlin support in Spring Framework 5.0</strong></a></p></li>
+
+<li><p><a href="http://frozenfractal.com/blog/2017/2/10/10-cool-things-about-kotlin/"><strong>10 cool things about Kotlin</strong></a></p></li>
+
+<li><p><a href="https://github.com/Kotlin/kotlin-fullstack-sample"><strong>Kotlin full stack application example</strong></a></p></li>
+
+<li><p><a href="https://hashnode.com/post/why-i-abandoned-java-in-favour-of-kotlin-ciuzhmecf09khdc530m1ghu6d"><strong>Why I abandoned Java in favour of Kotlin</strong></a></p></li>
+
+<li><p><a href="https://medium.com/@johnnytn.mail/i-used-kotlin-at-a-hackathon-cd9eab1725f9"><strong>I used Kotlin at Hackathon</strong></a></p></li>
+
+<li><p><a href="https://fabiomsr.github.io/from-java-to-kotlin/"><strong>From Java to Kotlin</strong></a></p></li>
+
+<li><p><a href="https://kotlinlang.org/docs/reference/idioms.html"><strong>Kotlin Idioms</strong></a></p></li>
+</ul>
+
+<p>翻译原文： <a href="https://medium.com/@magnus.chatt/why-you-should-totally-switch-to-kotlin-c7bbde9e10d5">Why you should totally switch to Kotlin
+</a></p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BF%BB%E8%AF%91/">翻译</a>
+          <a href="/tags/kotlin/">kotlin</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/hhvm-installation/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ubuntu下安装HHVM</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB/">
+            <span class="next-text nav-default">主键和唯一索引</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

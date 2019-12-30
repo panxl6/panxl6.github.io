@@ -1,0 +1,274 @@
+Building sites … WARN 2019/09/02 08:44:01 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:44:01 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:44:01 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:44:01 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+
+                   | ZH-CN  
++------------------+-------+
+  Pages            |    29  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    40  
+  Processed images |     0  
+  Aliases          |     9  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Total in 97 ms
+Watching for changes in /home/ubuntu/GitRepository/panxl6.blog/{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /home/ubuntu/GitRepository/panxl6.blog/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://193.112.66.143:9000/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:46:21.040 +0800
+WARN 2019/09/02 08:46:21 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:46:21 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:46:21 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:46:21 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 120 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:46:39.040 +0800
+WARN 2019/09/02 08:46:39 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:46:39 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:46:39 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:46:39 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 115 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:47:10.040 +0800
+WARN 2019/09/02 08:47:10 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:47:10 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:47:10 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:47:10 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 111 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:47:19.040 +0800
+WARN 2019/09/02 08:47:19 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:47:19 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:47:19 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:47:19 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 140 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:47:57.040 +0800
+WARN 2019/09/02 08:47:57 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:47:57 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:47:57 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:47:57 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 92 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:48:22.040 +0800
+WARN 2019/09/02 08:48:22 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:48:22 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:48:22 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:48:22 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 116 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:48:46.040 +0800
+WARN 2019/09/02 08:48:46 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:48:46 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:48:46 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:48:46 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 82 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 08:50:19.040 +0800
+WARN 2019/09/02 08:50:19 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:50:19 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:50:19 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 08:50:19 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 101 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:54:24.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/why-kotlin.md": WRITE
+WARN 2019/09/02 08:54:24 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:54:24 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:54:24 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 511 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:56:25.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/why-kotlin - 副本.md": WRITE
+WARN 2019/09/02 08:56:25 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:56:25 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:56:25 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 51 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:56:34.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/why-kotlin - 副本.md": REMOVE
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/golang-restful-api.md": WRITE
+WARN 2019/09/02 08:56:34 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:56:34 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:56:34 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 47 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:57:01.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/golang-restful-api.md": WRITE
+WARN 2019/09/02 08:57:01 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:57:01 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:57:01 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 87 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:57:19.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/golang-restful-api.md": WRITE
+WARN 2019/09/02 08:57:19 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:57:19 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:57:19 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 53 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:57:24.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/golang-restful-api.md": WRITE
+WARN 2019/09/02 08:57:24 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:57:24 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:57:24 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 101 ms
+
+Change detected, rebuilding site.
+2019-09-02 08:57:35.040 +0800
+Source changed "/home/ubuntu/GitRepository/panxl6.blog/content/post/golang-restful-api.md": WRITE
+WARN 2019/09/02 08:57:35 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 08:57:35 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 08:57:35 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+Total in 51 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:05:59.040 +0800
+WARN 2019/09/02 09:05:59 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:05:59 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:05:59 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:05:59 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 178 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:06:32.040 +0800
+WARN 2019/09/02 09:06:32 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:06:32 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:06:32 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:06:32 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 167 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:07:25.040 +0800
+WARN 2019/09/02 09:07:25 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:07:25 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:07:25 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:07:25 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 125 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:07:49.040 +0800
+WARN 2019/09/02 09:07:49 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:07:49 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:07:49 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:07:49 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 171 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:08:08.040 +0800
+WARN 2019/09/02 09:08:08 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:08:08 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:08:08 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:08:08 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 192 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:08:21.040 +0800
+WARN 2019/09/02 09:08:21 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:08:21 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:08:21 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:08:21 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 230 ms
+
+Change of config file detected, rebuilding site.
+2019-09-02 09:12:17.040 +0800
+WARN 2019/09/02 09:12:17 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 09:12:17 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 09:12:17 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 09:12:17 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+Total in 166 ms
+Building sites … WARN 2019/09/02 20:53:11 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 20:53:11 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 20:53:11 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 20:53:12 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+
+                   | ZH-CN  
++------------------+-------+
+  Pages            |    37  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    40  
+  Processed images |     0  
+  Aliases          |    12  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Total in 756 ms
+Watching for changes in /home/ubuntu/GitRepository/panxl6.blog/{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /home/ubuntu/GitRepository/panxl6.blog/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://193.112.66.143:9000/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+Building sites … WARN 2019/09/02 20:53:41 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/09/02 20:53:41 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like: 
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/09/02 20:53:41 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/09/02 20:53:42 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+
+                   | ZH-CN  
++------------------+-------+
+  Pages            |    37  
+  Paginator pages  |     0  
+  Non-page files   |     0  
+  Static files     |    40  
+  Processed images |     0  
+  Aliases          |    12  
+  Sitemaps         |     1  
+  Cleaned          |     0  
+
+Total in 598 ms
+Watching for changes in /home/ubuntu/GitRepository/panxl6.blog/{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /home/ubuntu/GitRepository/panxl6.blog/config.toml
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop

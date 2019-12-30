@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>教你从零开始写一个哈希表--调整大小 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="在这一节，我们来编写哈希函数。
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/learning-hash-table-hash-function/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="教你从零开始写一个哈希表--调整大小" />
+<meta property="og:description" content="在这一节，我们来编写哈希函数。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/learning-hash-table-hash-function/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="教你从零开始写一个哈希表--调整大小">
+<meta itemprop="description" content="在这一节，我们来编写哈希函数。">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="1752">
+
+
+
+<meta itemprop="keywords" content="哈希表,数据结构," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="教你从零开始写一个哈希表--调整大小"/>
+<meta name="twitter:description" content="在这一节，我们来编写哈希函数。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">教你从零开始写一个哈希表--调整大小</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"> 数据结构 </a>
+            </div>
+          <span class="more-meta"> 约 1752 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>在这一节，我们来编写哈希函数。</p>
+
+<p>&emsp;&emsp;此时，哈希表已经有一定数量的桶了。随着越来越多的键值对插入，哈希表将会满负荷。这个问题很大，主要从两方面考虑：
+1. 高概率的冲突下，哈希表的性能急剧下降；
+2. 当前的哈希表只能存储固定数量的键值对。如果用户尝试着去存储的需求超过这个数值时，插入函数会执行失败。</p>
+
+<p>&emsp;&emsp;为了解决这个问题，我们可以在桶数组将要满的时候增加数组的大小，然后用哈希表的<code>count</code>属性来记录存储的键值对总数。每次执行插入和删除时，计算表的负载，或者说使用率。如果这个指标高于或者低于一个固定的值，我们就调整桶的大小。</p>
+
+<p>&emsp;&emsp;判断桶数组调整的阈值：
+- 如果负载&gt;0.7，我们就扩大数组；
+- 如果负载&lt;0.1，我们就减小数组。</p>
+
+<p>&emsp;&emsp;调整哈希表的大小，我们简单的创建一个当前哈希表一半大小或者两倍大小的新的哈希表，然后把所有未被删除的键值对插入到其中。
+&emsp;&emsp;新数组大小应该是与当前大小的一半或两倍最接近（小于或大于）的素数。计算新数组的大小并不简单。哈希表得保存一个基准的大小&ndash;用户预期的数组大小。然后把第一个比基准大小要大的素数设定为实际大小。扩大数组时，我们把这个基准大小翻倍，然后找出第一个比翻倍后的基准要大的第一个素数。将数组大小调小，我们将数组的大小减半，然后找到比当前数组的大小减半后大的第一个素数。</p>
+
+<p>&emsp;&emsp;此处设定基准值为50。</p>
+
+<p>&emsp;&emsp;我们不预先保存（素数值），而是通过检查每一个符合的要求数是否为素数的暴力搜索方法来查找邻近的素数。虽然暴力求解法听起来就有问题，但是实际上我们要找的数很小，而这个过程花的时间比重新计算哈希表中键值对的哈希值的时间更有价值。
+&emsp;&emsp;先定义一个查找邻近素数的函数，然后在<code>prime.h</code>以及<code>prime.c</code>两个文件中去实现这个函数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// prime.h
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">next_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+<span class="c1">// prime.c
+</span><span class="c1"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&#34;prime.h&#34;</span><span class="cp">
+</span><span class="cp"></span>
+
+<span class="cm">/*
+</span><span class="cm"> * Return whether x is prime or not
+</span><span class="cm"> *
+</span><span class="cm"> * Returns:
+</span><span class="cm"> *   1  - prime
+</span><span class="cm"> *   0  - not prime
+</span><span class="cm"> *   -1 - undefined (i.e. x &lt; 2)
+</span><span class="cm"> */</span>
+<span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">floor</span><span class="p">(</span><span class="n">sqrt</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span> <span class="n">x</span><span class="p">));</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">x</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="cm">/*
+</span><span class="cm"> * Return the next prime after x, or x if x is prime
+</span><span class="cm"> */</span>
+<span class="kt">int</span> <span class="nf">next_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">x</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;接下来，<code>ht_new</code>函数需要升级以支持创建一个有固定大小的哈希表。新建一个函数，<code>ht_new_sized</code>，然后修改<code>ht_new</code>函数，让它带着一个默认的起始大小调用<code>ht_new_sized</code>函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// hash_table.c
+</span><span class="c1"></span><span class="k">static</span> <span class="n">ht_hash_table</span><span class="o">*</span> <span class="nf">ht_new_sized</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">base_size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span> <span class="o">=</span> <span class="n">xmalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="p">));</span>
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">base_size</span> <span class="o">=</span> <span class="n">base_size</span><span class="p">;</span>
+
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">ht</span><span class="o">-&gt;</span><span class="n">base_size</span><span class="p">);</span>
+
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">items</span> <span class="o">=</span> <span class="n">xcalloc</span><span class="p">((</span><span class="n">size_t</span><span class="p">)</span><span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">ht_item</span><span class="o">*</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">ht</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">ht_hash_table</span><span class="o">*</span> <span class="nf">ht_new</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">ht_new_sized</span><span class="p">(</span><span class="n">HT_INITIAL_BASE_SIZE</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;现在，哈希表大小调整函数已经功能完备了。
+&emsp;&emsp;在大小调节函数中，我们确保减小哈希表大小时，不会把大小调的比它预设的最小值还小。我们初始化了预期大小的新的哈希表，并将所有的非空或者已被删除的键值对都被插入到新的哈希表中。在删除旧表之前，我们将旧表的属性值迁移到新的哈希表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// hash_table.c
+</span><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ht_resize</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">base_size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">base_size</span> <span class="o">&lt;</span> <span class="n">HT_INITIAL_BASE_SIZE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">new_ht</span> <span class="o">=</span> <span class="n">ht_new_sized</span><span class="p">(</span><span class="n">base_size</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ht_item</span><span class="o">*</span> <span class="n">item</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">item</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">item</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">HT_DELETED_ITEM</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ht_insert</span><span class="p">(</span><span class="n">new_ht</span><span class="p">,</span> <span class="n">item</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">base_size</span> <span class="o">=</span> <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">base_size</span><span class="p">;</span>
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">=</span> <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">count</span><span class="p">;</span>
+
+    <span class="c1">// To delete new_ht, we give it ht&#39;s size and items 
+</span><span class="c1"></span>    <span class="k">const</span> <span class="kt">int</span> <span class="n">tmp_size</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+    <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">tmp_size</span><span class="p">;</span>
+
+    <span class="n">ht_item</span><span class="o">**</span> <span class="n">tmp_items</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">;</span>
+    <span class="n">ht</span><span class="o">-&gt;</span><span class="n">items</span> <span class="o">=</span> <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">items</span><span class="p">;</span>
+    <span class="n">new_ht</span><span class="o">-&gt;</span><span class="n">items</span> <span class="o">=</span> <span class="n">tmp_items</span><span class="p">;</span>
+
+    <span class="n">ht_del_hash_table</span><span class="p">(</span><span class="n">new_ht</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;为了简化大小调节，我们定义了两个小函数来调大和调小。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// hash_table.c
+</span><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ht_resize_up</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">new_size</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">base_size</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">ht_resize</span><span class="p">(</span><span class="n">ht</span><span class="p">,</span> <span class="n">new_size</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">ht_resize_down</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">new_size</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">base_size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">ht_resize</span><span class="p">(</span><span class="n">ht</span><span class="p">,</span> <span class="n">new_size</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>&emsp;&emsp;为了执行大小调整（逻辑），我们要在插入和删除时检查哈希表的负载。如果高于或低于预设值0.7和0.1，我们就会相应的调小或调大哈希表。
+&emsp;&emsp;为了避免浮点运算，我们把<code>count</code>属性乘以100，然后再检查它是否高于70或低于10。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// hash_table.c
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">ht_insert</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">load</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">load</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ht_resize_up</span><span class="p">(</span><span class="n">ht</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">ht_delete</span><span class="p">(</span><span class="n">ht_hash_table</span><span class="o">*</span> <span class="n">ht</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">load</span> <span class="o">=</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">ht</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">load</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ht_resize_down</span><span class="p">(</span><span class="n">ht</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><em>上一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84995857">教你从零开始写一个哈希表&ndash;接口</a>
+<em>下一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84995871">教你从零开始写一个哈希表&ndash;附录</a></p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/learning-hash-table-introduction/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">教你从零开始写一个哈希表--导读</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/learning-hash-table-appendix/">
+            <span class="next-text nav-default">教你从零开始写一个哈希表--附录</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

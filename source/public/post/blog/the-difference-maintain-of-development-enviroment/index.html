@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>开发环境的两种维护方式比较 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="维护一套公用的开发环境，还是每个人自己搭？这是一个问题。
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/the-difference-maintain-of-development-enviroment/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="开发环境的两种维护方式比较" />
+<meta property="og:description" content="维护一套公用的开发环境，还是每个人自己搭？这是一个问题。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/the-difference-maintain-of-development-enviroment/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="开发环境的两种维护方式比较">
+<meta itemprop="description" content="维护一套公用的开发环境，还是每个人自己搭？这是一个问题。">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="537">
+
+
+
+<meta itemprop="keywords" content="自我," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="开发环境的两种维护方式比较"/>
+<meta name="twitter:description" content="维护一套公用的开发环境，还是每个人自己搭？这是一个问题。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">开发环境的两种维护方式比较</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        
+          <span class="more-meta"> 约 537 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>维护一套公用的开发环境，还是每个人自己搭？这是一个问题。</p>
+
+<h3 id="分散式开发环境的问题">分散式开发环境的问题：</h3>
+
+<ol>
+<li>重复搭建开发环境（从零开始重新配置），对新人不友好；</li>
+<li>对于跟第三方团队（外部依赖）有远程调用的接口，本地无法使用，因为对方设置了IP白名单限制；</li>
+<li>联调复杂，内网IP发生变更时，需要修改配置。如果一个项目联调时设计到多个成员，那么配置IP都要花很长的时间；</li>
+<li>联调的过程中如果调试代码，容易影响联调，需要再独立搭建一个联调环境；</li>
+<li>如果两个分支同时开发，而且两个分支之间的代码需要互相调用，双方的代码都在各自本地环境，联调困难；</li>
+<li>前后端没有一个可以完整体验的项目，因为各自的代码和功能都放在了本地；</li>
+</ol>
+
+<h3 id="分散式开发环境的好处">分散式开发环境的好处：</h3>
+
+<ol>
+<li>做到了天然的隔离，一个本地环境就可以看做一个单独的容器；</li>
+</ol>
+
+<h3 id="集中式开发环境的问题">集中式开发环境的问题：</h3>
+
+<ol>
+<li>一旦有一个人搞坏了开发环境，整个团队都无法正常工作；</li>
+<li>多个人同时修改一个文件时，存在代码冲突，必须立刻解决。不然继续后面的工作；</li>
+<li>集中式环境，一般需要通过ftp、ssh等方式将本地文件上传到远程服务器。如果没有版本控制，发生代码冲突时，难以感知；</li>
+<li>多人在服务器上远程调试，服务器的压力会比较大；</li>
+</ol>
+
+<h3 id="集中式开发环境的好处">集中式开发环境的好处：</h3>
+
+<ol>
+<li>由于整个团队都在维护一个环境，开箱即用，对新人比较友好；</li>
+<li>由于集中放在远程服务器，可以方便的进行远程办公；</li>
+</ol>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%87%AA%E6%88%91/">自我</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/code-redirect/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">代码重定向</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/about/">
+            <span class="next-text nav-default">归去来兮--github</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

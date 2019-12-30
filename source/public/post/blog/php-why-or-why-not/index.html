@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>PHP是世界上最好语言吗？ - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/php-why-or-why-not/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="PHP是世界上最好语言吗？" />
+<meta property="og:description" content="PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/php-why-or-why-not/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="PHP是世界上最好语言吗？">
+<meta itemprop="description" content="PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="5917">
+
+
+
+<meta itemprop="keywords" content="哈希表,数据结构," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PHP是世界上最好语言吗？"/>
+<meta name="twitter:description" content="PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">PHP是世界上最好语言吗？</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"> 数据结构 </a>
+            </div>
+          <span class="more-meta"> 约 5917 字 </span>
+          <span class="more-meta"> 预计阅读 12 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#php是世界上最好的语言吗">PHP是世界上最好的语言吗？</a>
+<ul>
+<li><a href="#历史">历史</a></li>
+<li><a href="#从-hello-world-说起">从<code>hello world</code>说起</a></li>
+<li><a href="#php的语言缺陷">PHP的语言缺陷</a>
+<ul>
+<li><a href="#for-foreach-循环中的变量作用域问题"><code>for/foreach</code>循环中的变量作用域问题</a></li>
+<li><a href="#动态类型一时爽">动态类型一时爽</a>
+<ul>
+<li><a href="#一个变量做多件事情">一个变量做多件事情</a></li>
+</ul></li>
+<li><a href="#码分复用-带来的问题">“码分复用”带来的问题</a>
+<ul>
+<li><a href="#概念升维">概念升维</a></li>
+<li><a href="#状态码歧义">状态码歧义</a></li>
+</ul></li>
+<li><a href="#引用-以及其他残留的c语言特性">引用，以及其他残留的C语言特性</a></li>
+<li><a href="#内部库函数的命名方式和风格">内部库函数的命名方式和风格</a>
+<ul>
+<li><a href="#命名风格混乱">命名风格混乱</a></li>
+<li><a href="#函数的命名方式-前缀-缩写-类">函数的命名方式(前缀、缩写、类)</a></li>
+<li><a href="#函数的参数签名混乱">函数的参数签名混乱</a></li>
+</ul></li>
+<li><a href="#难以调试-错误信息对开发者不友好">难以调试，错误信息对开发者不友好</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-fake-example-just-imagine-some-lengthy-code-here">a fake example; just imagine some lengthy code here</a>
+<ul>
+<li>
+<ul>
+<li><a href="#php扩展开发-真香-还是鸡肋">PHP扩展开发，真香？还是鸡肋？</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？</p>
+
+<h1 id="php是世界上最好的语言吗">PHP是世界上最好的语言吗？</h1>
+
+<p>PHP，曾是2004年的<a href="https://www.tiobe.com/tiobe-index/">编程语言流行度排行榜</a>的winner，而如今（2019年）将要跌出Top 10，它都面临着什么样的问题？从2012年起，iPhone引领的移动互联网兴起之后，后端开发新秀有：Golang、NodeJS、Rust、Kotlin等。而老牌的Java，也随着Spring boot、Spring cloud一类的优秀框架的生态繁荣，也进入了新的增长期。PHP似乎不再是世界上最好的语言了，我们一起来反思一下。</p>
+
+<ul>
+<li>历史</li>
+<li>从<code>Hello world</code>说起</li>
+<li>PHP的语言缺陷</li>
+<li>PHP在开发流程上带来的改变</li>
+<li>底层实现</li>
+</ul>
+
+<h2 id="历史">历史</h2>
+
+<p>PHP，最早的叫法是*Personal Home Page Tools*。它的定位是个人主页开发工具，跟Java这样的企业级开发语言相比，在起初的定位上就有着很大的差别。发展到现在，它已经改名叫*Hypertext Preprocessor*。尽管它吸收了C、Java、Perl等语言的一些语法特性，并且在Web应用的快速、敏捷开发中有着成功的范例(LNMP)，但是它如今的比较优势已经没有那么明显了。</p>
+
+<hr />
+
+<h2 id="从-hello-world-说起">从<code>hello world</code>说起</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">echo</span> <span class="s2">&#34;hello world&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&#34;hello world&#34;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>PHP的<code>hello world</code>可以有两种。一种是cli模式下的脚本语言，另一种是CGI模式下的模板语言。PHP的<code>hello world</code>里面特地添加了<code>&lt;?php</code>标记来区分，或者说兼容这两种场景。</p>
+
+<p>在Java EE里面，模板语言跟java是另一回事。两者的文件后缀就不一样。一个是<code>.java</code>，另一个是<code>.jsp</code>。这样一来，java独立发展，jsp只是java的一个应用。</p>
+
+<p>而PHP，却把模板语言的功能融合到了语言本身。对于开发小型web应用来说，这种开箱即用的特性就代表了效率，尤其是在JavaScript到处是坑的年代。</p>
+
+<p>然而，如今的JavaScript得到大幅度的增强，并且前后端分离开始流行了。PHP作为可以进行服务端渲染的模板语言，就没有了比较优势。毕竟，JavaScript可以运行在任意的浏览器，并且是前端开发的标准语言。最终，前端的归前端，后端的归后端。</p>
+
+<p>跟同一时代的胶水语言Python语言相比，你很少会看到PHP会在Web以外的领域有其他的成功应用。而Python则遍地开花。如今的软件开发领域，大数据、人工智能等其他主题已经慢慢的蚕食了Web开发的份额，而PHP遭到了降维打击。</p>
+
+<p>我们再来看一下最经典的C语言<code>hello world</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;hello, world&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>不仅仅是C语言，基本上编译型语言都是从main函数开始的。单一入口的规定，在语言层面就建议或者说约束你，后面的模块、函数、类等要素要以树状结构进行组织。比如，Java强制代码以类的形式组织，Python强制缩进一致，Golang强制代码风格的统一。而PHP，作为一门脚本语言。所有的调用都可以成为入口。一个文件就是一个应用。如果你不按照最佳实践进行代码组织，最后的PHP代码一般都会是混乱的。</p>
+
+<h2 id="php的语言缺陷">PHP的语言缺陷</h2>
+
+<h3 id="for-foreach-循环中的变量作用域问题"><code>for/foreach</code>循环中的变量作用域问题</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="nv">$i</span><span class="p">;</span>
+
+<span class="cm">/* 最终的输出结果：
+</span><span class="cm">0
+</span><span class="cm">1
+</span><span class="cm">2
+</span><span class="cm">3
+</span><span class="cm">*/</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>你会发现，变量<code>$i</code>在for循环以外的地方居然也被打印了。在C语言里面，这肯定是语法错误了。变量<code>$i</code>被使用的时候，就被声明了，但是PHP并没有把它的作用范围限制在for循环以内。python也有这个问题。</p>
+
+<p>如果你不留意这个现象（作用域被污染），那么就会出现计数器的初始值错误，或者变量值被覆盖等问题。</p>
+
+<h3 id="动态类型一时爽">动态类型一时爽</h3>
+
+<p>PHP是动态类型的语言，对于变量的类型并没有约束。任何时间，任何变量可以是任意类型。</p>
+
+<p>其实，C语言也可以理解为“动态类型”的语言。由于C语言中，(void*)指针可以指向任意类型的变量，然后就看你怎么去解析指针指向的变量了。</p>
+
+<p>比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">pthread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">thread_id</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">request_handler</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">client_sock</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="o">*</span><span class="nf">request_handler</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">client_sock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">p</span><span class="p">;</span>
+
+    <span class="n">response</span><span class="p">(</span><span class="o">&amp;</span><span class="n">client_sock</span><span class="p">,</span> <span class="n">request</span><span class="p">(</span><span class="o">&amp;</span><span class="n">client_sock</span><span class="p">));</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="一个变量做多件事情">一个变量做多件事情</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">$a = &#39;userName&#39;; // 用户输入
+
+$b = $a; //变量$a的使命已经完成了
+
+$a = 3; // 又一次用$a变量这个容器去承载另一件事的数据</code></pre></td></tr></table>
+</div>
+</div>
+<p>当你重构这段代码的时候，不同类型的值对应则不同的业务逻辑。那么你就需要增加更多的变量来填补以前的逻辑缺陷。这样一来代码膨胀了，膨胀到一个变量做一件事时应有的代码量。这样会有一个问题，你原先满大街用的变量要换个名称了，你要改很多逻辑，替换很多变量。</p>
+
+<h3 id="码分复用-带来的问题">“码分复用”带来的问题</h3>
+
+<p>PHP对空状态的宽容，以及动态类型带来的灵活性，违反了一次只做一件事的原则。</p>
+
+<h4 id="概念升维">概念升维</h4>
+
+<p>在C语言家族中，错误码是很常见的一个概念。
+在Java中，遇到问题就直接抛出一个异常。就只有一个概念。</p>
+
+<p>在C语言编程中，对于简单的问题，返回<code>true</code>代表执行成功，返回<code>false</code>表示执行失败。但是，当我们需要更细的粒度是，<code>true</code>和<code>false</code>就不够用了，毕竟一位二进制只能表示两种可能。那么我们就扩充一下，返回一个十进制的<code>errno</code>变量吧。这样一来就发生了概念的维度上升。</p>
+
+<p>原来的<code>true</code>或者<code>false</code>仅仅表示系统错误(概念上对应于Java中的Error异常，不可预测的错误)，比如：mysql读取失败、redis读取失败、网络异常；errCode表示业务错误(对应于Java中的Exception，可以预测的错误)，比如：参数非法，输入不符合限制。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">// 版本1
+// 此时，$ret变量既表示返回结果的内容，又表示执行状况
+function getUserInfo()
+{
+	$ret = $redis-&gt;hget(&#39;hashName&#39;, $uid);
+	// 系统错误
+	if (!$ret)
+		return false;
+
+	// 业务逻辑错误
+	if (empty($ret[&#39;uid&#39;]))
+		return false;
+		
+	return true;
+}
+
+// 版本2
+class Test
+{
+	protected $errCode = 0;
+	function getUserInfo(<span class="err">&amp;</span>$data)
+	{
+		$ret = $redis-&gt;hget(&#39;hashName&#39;, $uid);
+
+		// 系统错误(redis读取异常)
+		if ($ret === false) {
+			return false;
+		}
+		
+		// 业务逻辑错误(缺少必要字段)
+		if (empty($ret[&#39;uid&#39;])) {
+			$this-&gt;errCode = 10001;
+			return true;
+		}
+		
+		$data = $ret;
+		return true;
+	}
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>PHP的很多类库函数就继承了C语言的这一类思想。</p>
+
+<p>比如，字符串查找函数<code>strpos($src, $neddle)</code>。如果查找失败返回<code>false</code>，查找成功返回起始下标。这一点可以借鉴Go语言，返回两个参数。</p>
+
+<h4 id="状态码歧义">状态码歧义</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">function demo()
+{
+	$userInput = $_GET[&#39;user_input&#39;];
+	
+	if (empty($userInput)) {
+		echo &#34;用户投了否定票&#34;;
+		return false;
+	}
+
+	echo &#34;用户投了支持票&#34;;
+	
+	return true;
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>在应用中，我们一般使用枚举值来表示业务的状态。</p>
+
+<p>从上面的例子来看，会产生歧义。我们以0或者说空，作为否定票的标记，以非空的值作为支持票的定义。但是，如果前端把参数传丢了，我们就默认为用户投了否定票。</p>
+
+<p>而实际上是前端有bug。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">function demo()
+{
+	$userInput = $_GET[&#39;user_input&#39;];
+	
+	if ($userInput == 1) {
+		echo &#34;用户投了否定票&#34;;
+		return false;
+	}
+
+	if ($userInput == 2) {
+		echo &#34;用户投了支持票&#34;;
+		return true;
+	}
+	
+	echo &#34;未定义的参数&#34;;	
+	
+	return false;
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="引用-以及其他残留的c语言特性">引用，以及其他残留的C语言特性</h3>
+
+<p>在Java、Python等一类较为现代的编程语言，都在极力的隐藏指针这个概念。但是PHP中，你还可以看到指针的影子。PHP里面可以使用引用。这样你就可以获取变量的地址，并传递变量的地址。跟Go语言中的指针一样，不能做变量的位移计算，是一个阉割版的指针。</p>
+
+<p>下面的例子中，使用引用的方式进行传参，意图打印<code>$data</code>中的所有值。最终输出的3个1，和1个2。由于第一次调用时变量<code>$b</code>拥有了值1，所以接下来的两次调用<code>$b</code>就不为空，也就不会赋予默认值了。</p>
+
+<p>指针是有状态的，全局的。它破坏了作用域的限制，并且还会影响垃圾回收的执行。不过，只读的指针可以减少内存的拷贝。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">class Demo
+{
+    private $data = array(1, &#39;&#39;, &#39;&#39;, 2, &#39;string&#39;);
+
+    private function defaultParmaWithReference($index, <span class="err">&amp;</span>$b=array())
+    {
+        if ($index === null) {
+            return;
+        }
+
+        $b = $this-&gt;data[$index];
+    }
+
+    public function testReference()
+    {
+        $this-&gt;defaultParmaWithReference(0, $b);
+        var_dump(&#39;第一次调用：&#39;, $b);
+
+        $this-&gt;defaultParmaWithReference($a, $b);
+        var_dump(&#39;第二次调用：&#39;, $b);
+
+        $this-&gt;defaultParmaWithReference($a, $b);
+        var_dump(&#39;第三次调用：&#39;, $b);
+
+        $this-&gt;defaultParmaWithReference(3, $b);
+        var_dump(&#39;第四次调用：&#39;, $b);
+    }    
+}
+
+
+$demo = new Demo();
+$demo-&gt;testReference();</code></pre></td></tr></table>
+</div>
+</div>
+<p>输出结果:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">string(18) &#34;第一次调用：&#34;
+int(1)
+PHP Notice:  Undefined variable: a in /home/ubuntu/Projects/php/php_flaw/DefaultParam.php on line 22
+string(18) &#34;第二次调用：&#34;
+int(1)
+PHP Notice:  Undefined variable: a in /home/ubuntu/Projects/php/php_flaw/DefaultParam.php on line 25
+string(18) &#34;第三次调用：&#34;
+int(1)
+string(18) &#34;第四次调用：&#34;
+int(2)</pre></td></tr></table>
+</div>
+</div>
+<h3 id="内部库函数的命名方式和风格">内部库函数的命名方式和风格</h3>
+
+<p>PHP上手快的一个原因，是它里面的各种高度封装的函数。但是，PHP里面的函数、类库的组织方式相比其他工业级标准语言要混乱得多。给你讲个笑话，某个PHP程序猿拍了一下脑袋苦思冥想。你猜他在干嘛？喂，那个很牛逼的函数，叫什么名字来着？</p>
+
+<h4 id="命名风格混乱">命名风格混乱</h4>
+
+<p>有些是按C语言的单词下划线的方式命名的，有些是按面向对象大小写的方式命名的。剩下的就是没有风格的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">1. gettype() vs get_class()
+2. str_pos() str_replace() str_split() vs strcmp() strchr() strcasecmp()
+3. base64_encode() vs urlencode()
+4. htmlentities() vs html_entity_decode()
+5. swoole_server() vs Swoole\Server()</pre></td></tr></table>
+</div>
+</div>
+<h4 id="函数的命名方式-前缀-缩写-类">函数的命名方式(前缀、缩写、类)</h4>
+
+<p>PHP中，即使是同一个领域的库函数，也有着五花八门的名称组织方式。下面以时间处理系列函数为例。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">1. void usleep  () vs mixed microtime  () // 单位缩写 vs 单词缩写
+2. strtolower() strtotime() strtoupper() vs ip2long () bin2hex() // 数字缩写 vs 单词
+3. date(&#39;Y-md&#39;) vs DateTime::createFromFormat(&#39;j-M-Y&#39;, &#39;15-Feb-2009&#39;) // 全局函数 vs 静态类方法
+4. swoole_server() vs Swoole\Server() // 全局函数 vs 类</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="函数的参数签名混乱">函数的参数签名混乱</h4>
+
+<p>这里的callback或者needle只是个例子，用于指示在一系列功能相关的接口中，具有相同含义的入参或者出参。</p>
+
+<p>PHP类库的函数，一会儿把关注点放在前面，一会儿放在后面。使用者很难形成稳固的印象。你必须看文档，否则很容易出错。</p>
+
+<p>相比之下，C++的STL、Java的Collection类库，函数的入参出参是高度的一致。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">Callback last:
+1. array array_filter  ( array $input  [, callback $callback  ] )
+2. array array_uintersect  ( array $array1  , array $array2  [, array $ ...  ], callback $data_compare_func  )
+3. bool usort  ( array <span class="err">&amp;</span>$array  , callback $cmp_function  )
+
+Callback first:
+1. array array_map  ( callback $callback  , array $arr1  [, array $...  ] )
+2. mixed call_user_func ( callback $function [, mixed $parameter [, mixed $... ]] )
+
+----------------------------------------------------------------------------------------------------------
+
+Needle last:
+1. int strpos ( string $haystack  , mixed $needle  [, int $offset= 0  ] )
+2. string stristr ( string $haystack , mixed $needle [, bool $before_needle = false ] )
+
+Needle first:
+1. bool in_array  ( mixed $needle  , array $haystack  [, bool $strict  ] )
+2. mixed array_search  ( mixed $needle  , array $haystack  [, bool $strict  ] )
+3. str_replace ( mixed $needle , mixed $replace , mixed $subject [, int <span class="err">&amp;</span>$count ] )</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="难以调试-错误信息对开发者不友好">难以调试，错误信息对开发者不友好</h3>
+
+<p>如果你合并代码，出现括号、双引号缺少了一个的情况，那么就会造成语法错误。本来语法错误，是最容易处理的。但是PHP的语法提示，却很容易误导你。</p>
+
+<p>比如，下面的错误其实是在第3行，但是语法错误却提示你在20行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-PHP Parse error:  syntax error, unexpected 'thank' (T_STRING) in /home/ubuntu/Projects/php/php_flaw/CompileDetail.php on line 20```" data-lang="PHP Parse error:  syntax error, unexpected 'thank' (T_STRING) in /home/ubuntu/Projects/php/php_flaw/CompileDetail.php on line 20```"></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-PHP Parse error:  syntax error, unexpected 'thank' (T_STRING) in /home/ubuntu/Projects/php/php_flaw/CompileDetail.php on line 20```" data-lang="PHP Parse error:  syntax error, unexpected 'thank' (T_STRING) in /home/ubuntu/Projects/php/php_flaw/CompileDetail.php on line 20```"></code></pre></td></tr></table>
+</div>
+</div>
+<p>php
+&lt;?php</p>
+
+<p>$string = &ldquo;welcome to my personal home page;</p>
+
+<h1 id="a-fake-example-just-imagine-some-lengthy-code-here">a fake example; just imagine some lengthy code here</h1>
+
+<p>if ($page_id == 0) {
+  render_home_page();
+} elseif ($page_id == 1) {
+  render_contacts_page();
+} elseif ($page_id == 2) {
+  render_about_page();
+} elseif ($page_id == 3) {
+  render_services_page();
+} elseif ($page_id == 4) {
+  render_weather_page();
+} elseif ($page_id == 5) {
+  render_news_page();
+}</p>
+
+<p>print &ldquo;thank you for visiting!&rdquo;;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">另一方面，PHP报错的时候，只是给出了哪一行有问题，但并没有给出一个调用栈的信息。也就是说你得自己看代码，然后一路脑补。如果调用层次比较深，文件数量比较多，那就很头疼了。</pre></td></tr></table>
+</div>
+</div>
+<p>PHP Notice:  Undefined variable: 0 in /home/ubuntu/Web/test/ErrorStack.php on line 5
+PHP Notice:  Undefined variable:  in /home/ubuntu/Web/test/ErrorStack.php on line 5
+int(3)
+PHP Parse error:  syntax error, unexpected &lsquo;$a&rsquo; (T_VARIABLE) in /home/ubuntu/Web/test/classA.php on line 7</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"></pre></td>
+<td class="lntd">
+<pre class="chroma"></pre></td></tr></table>
+</div>
+</div>
+<p>php
+&lt;?php</p>
+
+<p>function a($a)
+{
+    return $$$a + 1;
+}</p>
+
+<p>function b($a)
+{
+    return a($a) + 1;
+}</p>
+
+<p>function c($a)
+{
+    return b($a) + 1;
+}</p>
+
+<p>var_dump(c(0));</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">---------------------
+
+## PHP在开发流程上带来的改变
+在PHP中，有着一定量跟HTTP有关的全局变量和函数。它们成为PHP的语言要素。
+
+可以这么说，Java是面向对象的，而PHP是面向请求的。
+
+### 开发流程
+用PHP开发web应用时，你只需要改一下代码，然后上传代码到服务器，刷新浏览器，你就可以看到你的代码执行效果了。
+
+但是Java EE一类的开发方式，要求你编译代码--&gt;构建jar包--&gt;部署jar包--&gt;重启web容器。java的编译是比较耗时的操作。如果中途出现任何的错误（比如语法错误、端口被占用等），你又得重新再来一次。
+
+即便是同为动态语言的Python，开发web应用时，你也依然避免不了重启服务器的动作。
+
+你会发现，你很多时间都花在了写代码本身以外的事情。
+
+
+### 请求处理方式
+php-fpm为每个请求分配一个进程。这样一来，就起到了沙箱隔离的作用。
+
+每个请求的全局变量，都是从初始状态开始的，一致的。每个请求的生命周期互不影响，无状态的。
+
+即使一个请求出现了故障（比如执行了语法错误的代码等，比如你在某个进程中调用`die()`或者`exit()`），并不会影响其他请求。但是像php swoole一类的处理方式--每个请求复用一个进程或线程，就有可能互相影响。
+
+这种方式的一个弊端就是带来了一些性能问题。每个请求之间无法复用一些资源，比如文件句柄、配置文件等。每个请求都必须重新初始化。
+
+
+---------------------
+
+## 底层实现
+### 为什么PHP7要比PHP5的性能好？
+- [ ] 对比jvm虚拟机
+
+### 万能的数组：成也萧何，败也萧何</pre></td></tr></table>
+</div>
+</div>
+<p>java
+Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (int k = 0; k &lt; 100000; k++) {
+    map.put(k, k);
+}</p>
+
+<p>for (String key : map.keySet()) {
+    String value = map.get(key);
+    // do something
+}
+```
+上面的代码，第一步将10万条数据放到HashMap中；第二步，取出来用。这里有两个问题。</p>
+
+<ol>
+<li>resize问题。HashMap创建时，没有根据已知数据量进行初始化，导致后续的put操作需要执行多次的哈希表扩容操作。频繁的执行哈希表扩容操作，对CPU和垃圾收集都不友好。</li>
+<li>在循环取元素时，没用使用EntrySet，而是用了keySet。导致map.get()操作中出现重复计算hash的操作。</li>
+</ol>
+
+<p>在<code>java</code>集合中，当HashMap的链表长度超过8时，会自动转为红黑树。数据量扩张导致的哈希表问题就没那么明显了。</p>
+
+<p>有了上面的应用背景，我们来对比一下PHP中的数组。</p>
+
+<p>虽然PHP也有SPL集合框架，但是应用最广泛的还是PHP的数组。PHP数组是一个有序字典。底层实现仅仅是一个哈希表。</p>
+
+<p>为了实现有序遍历，PHP的哈希表维护了一个全局的双向链表。同时，为了区分PHP数组的key是数字还是字符串，PHP底层的哈希表维护了两个哈希值&ndash;增加了两次哈希值计算。</p>
+
+<h3 id="php扩展开发-真香-还是鸡肋">PHP扩展开发，真香？还是鸡肋？</h3>
+
+<p>PHP语言的函数和功能都是较为粗粒度的。如果你需要改造PHP，以实现差异化的功能，有两种方式。</p>
+
+<p>一种是<a href="http://www.laruence.com/2010/07/16/1648.html">定制PHP的语法</a>，比如向PHP中添加新的关键字。另一种是<a href="http://www.phpinternalsbook.com/">开发PHP扩展</a>，提升性能或者将C语言的能力透传给PHP，比如swoole、yaf框架等。</p>
+
+<p>PHP的维护者，更像是一群个体户。而Java的官方组织，更像是一家大企业。两者的差别导致了很多的问题。比如，前面提到的PHP库函数命名混乱，还有PHP发版时间不确定，而且更新升级较为缓慢等问题。</p>
+
+<p>增强PHP，或者改造PHP是一件做出来容易，做好很难的事情。你用C语言写了PHP扩展，后续的维护呢？比如swoole，swoole扩展要开发，php使用者也要更新自己的知识。这不见得省事。</p>
+
+<p>我们换一个思路，如果我们用Go语言来开发PHP扩展（比如swoole），那么扩展开发的效率要比用C语言时高一些。但是增强后的php的业务开发效率，跟Go语言开发业务的效率差别就不太大了。那么我们得到结论是，直接使用Go语言来开发业务，而不是PHP。</p>
+
+<h3 id="参考文献">参考文献</h3>
+
+<ol>
+<li><a href="https://slack.engineering/taking-php-seriously-cf7a60065329">taking php serious</a></li>
+<li><a href="https://php.net">php.net</a></li>
+<li><a href="http://phpsadness.com/">php sadness</a></li>
+<li><a href="https://book.douban.com/subject/30437260/">《大型网站性能优化实战》</a></li>
+</ol>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/classical-export-by-php/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">PHP数据导出功能优化案例</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/hhvm-installation/">
+            <span class="next-text nav-default">ubuntu下安装HHVM</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

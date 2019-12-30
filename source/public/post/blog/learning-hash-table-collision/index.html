@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>教你从零开始写一个哈希表--哈希冲突 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。
+" /><meta name="keywords" content="panxl6, 博客" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://www.panxl.cn/post/blog/learning-hash-table-collision/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="教你从零开始写一个哈希表--哈希冲突" />
+<meta property="og:description" content="哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.panxl.cn/post/blog/learning-hash-table-collision/" />
+<meta property="article:published_time" content="2019-09-01T22:17:30+08:00" />
+<meta property="article:modified_time" content="2019-09-01T22:17:30+08:00" />
+<meta itemprop="name" content="教你从零开始写一个哈希表--哈希冲突">
+<meta itemprop="description" content="哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。">
+
+
+<meta itemprop="datePublished" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T22:17:30&#43;08:00" />
+<meta itemprop="wordCount" content="592">
+
+
+
+<meta itemprop="keywords" content="哈希表,数据结构," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="教你从零开始写一个哈希表--哈希冲突"/>
+<meta name="twitter:description" content="哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">教你从零开始写一个哈希表--哈希冲突</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"> 数据结构 </a>
+            </div>
+          <span class="more-meta"> 约 592 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#再散列法">再散列法</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。</p>
+
+<p>&emsp;&emsp;哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。不同的关键字可能会被映射到同一个数组下标，如此一来就导致了哈希冲突。哈希表必须实现解决冲突的方法。
+&emsp;&emsp;我们的哈希表将使用开放地址法和再散列法。在桶索引冲突后，再散列法会使用两个哈希函数来计算键值对将要保存的桶索引值。
+&emsp;&emsp;有关其他哈希冲突的解决方法，请查看<a href="https://blog.csdn.net/panxl6/article/details/84995871">附录</a>。</p>
+
+<h3 id="再散列法">再散列法</h3>
+
+<p>&emsp;&emsp;索引<code>i</code>冲突后应该使用的新的索引位置根据下面的函数给出：
+&emsp;&emsp;<code>index = hash_a(string) + i * hash_b(string) % num_buckets</code>
+&emsp;&emsp;我们看到，如果没有哈希冲突的发生，i=0。此时，桶索引是字符串的<code>hash_a</code>值。如果发生了冲突，索引将由<code>hash_b</code>进行调整。
+&emsp;&emsp;有种可能是，<code>hash_b</code>返回了0，导致<code>i*hash_b(string)%num_buckets</code>也返回了0。这会使得哈希表不停的向同一个桶中插入键值对。我们可以通过对第二个哈希的结果加一来避免这种情况，以确保第二个项的结果不会是0。
+<code>index = (hash_a(string) + i * (hash_b(string) + 1)) % num_buckets</code></p>
+
+<p><em>具体实现</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">// hash_table.c
+</span><span class="c1"></span><span class="k">static</span> <span class="kt">int</span> <span class="nf">ht_get_hash</span><span class="p">(</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">num_buckets</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">attempt</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">hash_a</span> <span class="o">=</span> <span class="n">ht_hash</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">HT_PRIME_1</span><span class="p">,</span> <span class="n">num_buckets</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">hash_b</span> <span class="o">=</span> <span class="n">ht_hash</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">HT_PRIME_2</span><span class="p">,</span> <span class="n">num_buckets</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">hash_a</span> <span class="o">+</span> <span class="p">(</span><span class="n">attempt</span> <span class="o">*</span> <span class="p">(</span><span class="n">hash_b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="o">%</span> <span class="n">num_buckets</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><em>上一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84981842">教你从零开始写一个哈希表&ndash;哈希函数</a>
+<em>下一篇:</em><a href="https://blog.csdn.net/panxl6/article/details/84995857">教你从零开始写一个哈希表&ndash;接口</a></p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/blog/learning-hash-table-hash-glance/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">教你从零开始写一个哈希表</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/blog/learning-hash-table-resize/">
+            <span class="next-text nav-default">教你从零开始写一个哈希表--哈希函数</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  false , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.panxl.cn/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

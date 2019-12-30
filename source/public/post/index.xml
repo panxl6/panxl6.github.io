@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 修行中</title>
+    <link>https://www.panxl.cn/post/</link>
+    <description>Recent content in Posts on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Sep 2019 22:17:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.panxl.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>有助于构建程序世界底层认知的论文</title>
+      <link>https://www.panxl.cn/post/blog/paper-for-me/</link>
+      <pubDate>Tue, 10 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/paper-for-me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go语言RESTful API开发实战</title>
+      <link>https://www.panxl.cn/post/blog/golang-restful-api/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/golang-restful-api/</guid>
+      <description>&lt;p&gt;如今微服务、无服务器架构大行其道。而API开发是这些话题的主角。 Go语言开发效率要比Java Spring要快一些，性能上比PHP高出一个数量级。尤其是Go语言在并发方便非常的优秀，是2017年值得关注的一门语言。 本文通过一个经典的Todo应用来介绍使用Go语言开发API。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP数据导出功能优化案例</title>
+      <link>https://www.panxl.cn/post/blog/classical-export-by-php/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/classical-export-by-php/</guid>
+      <description>&lt;p&gt;本文以一个Excel表单导出功能的演化路线为示例，分享导出任务的通用模式、Reactor和Worker分离的思路等经验。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP是世界上最好语言吗？</title>
+      <link>https://www.panxl.cn/post/blog/php-why-or-why-not/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/php-why-or-why-not/</guid>
+      <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu下安装HHVM</title>
+      <link>https://www.panxl.cn/post/blog/hhvm-installation/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/hhvm-installation/</guid>
+      <description>&lt;p&gt;为了更深入的理解PHP7，安装HHVM并学一下Hack语言。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>为什么你应该完全切换到Kotlin？</title>
+      <link>https://www.panxl.cn/post/blog/why-kotlin/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/why-kotlin/</guid>
+      <description>&lt;p&gt;是时候开始使用现代的编程语言了!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>主键和唯一索引</title>
+      <link>https://www.panxl.cn/post/blog/%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>&lt;p&gt;主键和唯一索引的区别&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码重定向</title>
+      <link>https://www.panxl.cn/post/blog/code-redirect/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/code-redirect/</guid>
+      <description>&lt;p&gt;代码迁移和维护的一些技巧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>开发环境的两种维护方式比较</title>
+      <link>https://www.panxl.cn/post/blog/the-difference-maintain-of-development-enviroment/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/the-difference-maintain-of-development-enviroment/</guid>
+      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>归去来兮--github</title>
+      <link>https://www.panxl.cn/post/blog/about/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/about/</guid>
+      <description>&lt;p&gt;为何再次回到Github&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-hash-glance/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-hash-glance/</guid>
+      <description>&lt;p&gt;完整的实现，大概200行代码。这个教程读完需要一到两个小时。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希冲突</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-collision/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-collision/</guid>
+      <description>&lt;p&gt;哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希函数</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-resize/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-resize/</guid>
+      <description>&lt;p&gt;高概率的冲突，会使哈希表的性能急剧下降。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希表结构</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-api/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-api/</guid>
+      <description>&lt;p&gt;哈希函数将会实现以下的API：插入、查找、删除、更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希表结构</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-structure/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--导读</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-introduction/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--调整大小</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-hash-function/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-hash-function/</guid>
+      <description>&lt;p&gt;在这一节，我们来编写哈希函数。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--附录</title>
+      <link>https://www.panxl.cn/post/blog/learning-hash-table-appendix/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/learning-hash-table-appendix/</guid>
+      <description>&lt;p&gt;介绍常见的两种哈希冲突解决方案：链表法、开放寻址法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>消息消费的几种方式</title>
+      <link>https://www.panxl.cn/post/blog/how-to-consume-message/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/how-to-consume-message/</guid>
+      <description>&lt;p&gt;使用Crontab还是自己写多进程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>码分复用</title>
+      <link>https://www.panxl.cn/post/blog/code-multiplex/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>https://www.panxl.cn/post/blog/code-multiplex/</guid>
+      <description>&lt;p&gt;关于代码复杂性的一些观点&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
