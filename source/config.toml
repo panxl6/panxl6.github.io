@@ -1,4 +1,4 @@
-# baseURL = "https://panxl6.github.io"
+#baseURL = "https://panxl6.github.io"
 baseURL = "http://localhost:1313/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)

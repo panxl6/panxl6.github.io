@@ -39,7 +39,7 @@ sequenceDiagrams:
   options: ""
 
 ---
-一篇文章，一个思想。
+一篇论文，一个领域，一种思想。
 <!--more-->
 
 - [《The Log: What every software engineer should know about real-time data's unifying abstraction》](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
