@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - 修行中</title>
+  <title>关于函数参数的讨论 - 修行中</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,11 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="panxl6" /><meta name="description" content="参数的个数 没有入参，没有返回值 此时，函数不能跟其他代码块进行交互，退化成了一个指令。
-1 2 3 4  void sayHello() { printf(&amp;#34;do something\n&amp;#34;); }   若干个入参，没有返回值 数据的消费者。
-1 2 3 4 5 6  void saveLog(char* msg) { FILE *file = fopen(&amp;#34;log.txt&amp;#34;, &amp;#34;w&amp;#34;); fwrite(msg, sizeof(msg), 1, file); fclose(file); }   没有入参，有返回值 数据的提供者。效果上相当于一个变量。
-1 2 3 4  function getConfig() { return [1, 2, 3]; }   多个参数 将参数平铺展开传入，是一个比较直观的方式。但是参数过多时，代码的可读性下降，扩展性下降。这个时候将参数打包成一个对象传参。大量参数传递时，一般分为两部分，控制参数和业务参数。参数个数太多时，参数的装箱和拆箱也是很麻烦的一件事情。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  function queryUserInfo($uid, $userName, $mobile, $nickname, $birthday, $pageSize, $pageNum) { return []; } $param = [ // 分页控制参数 &amp;#39;page_size&amp;#39; =&amp;gt; $pageSize, &amp;#39;page_num&amp;#39; =&amp;gt; $pageNum, // 业务查询参数 &amp;#39;uid&amp;#39; =&amp;gt; $uid, &amp;#39;user_name&amp;#39; =&amp;gt; $userName, &amp;#39;nickname&amp;#39; =&amp;gt; $nickname, &amp;#39;birthday&amp;#39; =&amp;gt; $birthday ]; function queryUserInfo($param) { }   可变长度参数 将多个参数打包，虽然提升了扩展性，但是使用不太方便，容易导致代码的膨胀。可变参数提供了一个折中的方案。" /><meta name="keywords" content="panxl6, 博客, 架构" />
+<meta name="author" content="panxl6" /><meta name="description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。
+" /><meta name="keywords" content="panxl6, 博客, 架构" />
 
 
 
@@ -42,33 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="参数的个数 没有入参，没有返回值 此时，函数不能跟其他代码块进行交互，退化成了一个指令。
-1 2 3 4  void sayHello() { printf(&#34;do something\n&#34;); }   若干个入参，没有返回值 数据的消费者。
-1 2 3 4 5 6  void saveLog(char* msg) { FILE *file = fopen(&#34;log.txt&#34;, &#34;w&#34;); fwrite(msg, sizeof(msg), 1, file); fclose(file); }   没有入参，有返回值 数据的提供者。效果上相当于一个变量。
-1 2 3 4  function getConfig() { return [1, 2, 3]; }   多个参数 将参数平铺展开传入，是一个比较直观的方式。但是参数过多时，代码的可读性下降，扩展性下降。这个时候将参数打包成一个对象传参。大量参数传递时，一般分为两部分，控制参数和业务参数。参数个数太多时，参数的装箱和拆箱也是很麻烦的一件事情。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  function queryUserInfo($uid, $userName, $mobile, $nickname, $birthday, $pageSize, $pageNum) { return []; } $param = [ // 分页控制参数 &#39;page_size&#39; =&gt; $pageSize, &#39;page_num&#39; =&gt; $pageNum, // 业务查询参数 &#39;uid&#39; =&gt; $uid, &#39;user_name&#39; =&gt; $userName, &#39;nickname&#39; =&gt; $nickname, &#39;birthday&#39; =&gt; $birthday ]; function queryUserInfo($param) { }   可变长度参数 将多个参数打包，虽然提升了扩展性，但是使用不太方便，容易导致代码的膨胀。可变参数提供了一个折中的方案。" />
+<meta property="og:title" content="关于函数参数的讨论" />
+<meta property="og:description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" />
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="参数的个数 没有入参，没有返回值 此时，函数不能跟其他代码块进行交互，退化成了一个指令。
-1 2 3 4  void sayHello() { printf(&#34;do something\n&#34;); }   若干个入参，没有返回值 数据的消费者。
-1 2 3 4 5 6  void saveLog(char* msg) { FILE *file = fopen(&#34;log.txt&#34;, &#34;w&#34;); fwrite(msg, sizeof(msg), 1, file); fclose(file); }   没有入参，有返回值 数据的提供者。效果上相当于一个变量。
-1 2 3 4  function getConfig() { return [1, 2, 3]; }   多个参数 将参数平铺展开传入，是一个比较直观的方式。但是参数过多时，代码的可读性下降，扩展性下降。这个时候将参数打包成一个对象传参。大量参数传递时，一般分为两部分，控制参数和业务参数。参数个数太多时，参数的装箱和拆箱也是很麻烦的一件事情。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  function queryUserInfo($uid, $userName, $mobile, $nickname, $birthday, $pageSize, $pageNum) { return []; } $param = [ // 分页控制参数 &#39;page_size&#39; =&gt; $pageSize, &#39;page_num&#39; =&gt; $pageNum, // 业务查询参数 &#39;uid&#39; =&gt; $uid, &#39;user_name&#39; =&gt; $userName, &#39;nickname&#39; =&gt; $nickname, &#39;birthday&#39; =&gt; $birthday ]; function queryUserInfo($param) { }   可变长度参数 将多个参数打包，虽然提升了扩展性，但是使用不太方便，容易导致代码的膨胀。可变参数提供了一个折中的方案。">
-
-<meta itemprop="wordCount" content="209">
+<meta property="article:published_time" content="2019-12-07T21:42:01+08:00" />
+<meta property="article:modified_time" content="2019-12-07T21:42:01+08:00" />
+<meta itemprop="name" content="关于函数参数的讨论">
+<meta itemprop="description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。">
+<meta itemprop="datePublished" content="2019-12-07T21:42:01&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-07T21:42:01&#43;08:00" />
+<meta itemprop="wordCount" content="830">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="参数的个数 没有入参，没有返回值 此时，函数不能跟其他代码块进行交互，退化成了一个指令。
-1 2 3 4  void sayHello() { printf(&#34;do something\n&#34;); }   若干个入参，没有返回值 数据的消费者。
-1 2 3 4 5 6  void saveLog(char* msg) { FILE *file = fopen(&#34;log.txt&#34;, &#34;w&#34;); fwrite(msg, sizeof(msg), 1, file); fclose(file); }   没有入参，有返回值 数据的提供者。效果上相当于一个变量。
-1 2 3 4  function getConfig() { return [1, 2, 3]; }   多个参数 将参数平铺展开传入，是一个比较直观的方式。但是参数过多时，代码的可读性下降，扩展性下降。这个时候将参数打包成一个对象传参。大量参数传递时，一般分为两部分，控制参数和业务参数。参数个数太多时，参数的装箱和拆箱也是很麻烦的一件事情。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  function queryUserInfo($uid, $userName, $mobile, $nickname, $birthday, $pageSize, $pageNum) { return []; } $param = [ // 分页控制参数 &#39;page_size&#39; =&gt; $pageSize, &#39;page_num&#39; =&gt; $pageNum, // 业务查询参数 &#39;uid&#39; =&gt; $uid, &#39;user_name&#39; =&gt; $userName, &#39;nickname&#39; =&gt; $nickname, &#39;birthday&#39; =&gt; $birthday ]; function queryUserInfo($param) { }   可变长度参数 将多个参数打包，虽然提升了扩展性，但是使用不太方便，容易导致代码的膨胀。可变参数提供了一个折中的方案。"/>
+<meta itemprop="keywords" content="函数,编程文化," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关于函数参数的讨论"/>
+<meta name="twitter:description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -127,38 +114,21 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">关于函数参数的讨论</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
+        <span class="post-time"> 2019-12-07 </span>
         
-          <span class="more-meta"> 约 209 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 830 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#heading-1">没有入参，没有返回值</a></li>
-        <li><a href="#heading-2">若干个入参，没有返回值</a></li>
-        <li><a href="#heading-3">没有入参，有返回值</a></li>
-        <li><a href="#heading-4">多个参数</a></li>
-        <li><a href="#heading-5">入参的值问题</a></li>
-        <li><a href="#heading-6">数据的隔离</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</div>
+    
     <div class="post-content">
-      <h1 id="heading">参数的个数</h1>
+      <p>函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。</p>
+<h1 id="heading">参数的个数</h1>
 <h3 id="heading-1">没有入参，没有返回值</h3>
 <p>此时，函数不能跟其他代码块进行交互，退化成了一个指令。</p>
 <div class="highlight"><div class="chroma">
@@ -348,40 +318,28 @@ json_encode($data, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
 </div><h3 id="heading-6">数据的隔离</h3>
 <p>以上讨论的函数，是不依赖于上下文执行的纯函数。这些函数可以重复执行。代加工的数据只从入参获取，加工后的数据只通过返回值传递。
 而函数可以通过其他的方式获取数据，从而打破了函数对数据的隔离。比如，通过参数引用、通过进程间通信、通过函数闭包、通过全局变量获取数据、通过网络获取数据、通过系统调用获取数据等。</p>
-
     </div>
 
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">panxl6</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">
-        0001-01-01
-        
-    </span>
-  </p>
-  
-  
-</div>
+    
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/%E5%87%BD%E6%95%B0/">函数</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%96%87%E5%8C%96/">编程文化</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/code-multiplex/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">码分复用</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
         
+        <a class="next" href="/post/b%E7%AB%AF%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/">
+            <span class="next-text nav-default">B端产品的特点及开发经验</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>
         </div>
         
 
-  <span id="/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" class="leancloud_visitors" data-flag-title="">
+  <span id="/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" class="leancloud_visitors" data-flag-title="关于函数参数的讨论">
 		<span class="post-meta-item-text">文章阅读量 </span>
 		<span class="leancloud-visitors-count">0</span>
 		<p></p>
@@ -433,7 +391,7 @@ json_encode($data, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
   <span class="copyright-year">
     &copy; 
     2012 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -449,7 +407,7 @@ json_encode($data, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script><script></script><script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
