@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>开发环境的两种维护方式比较</title>
-      <link>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</guid>
-      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>归去来兮--github</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
@@ -36,6 +27,15 @@
       
       <guid>http://localhost:1313/post/about/</guid>
       <description>&lt;p&gt;为何再次回到Github&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>开发环境的两种维护方式比较</title>
+      <link>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</link>
+      <pubDate>Fri, 05 Jul 2019 08:02:10 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</guid>
+      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
     </item>
     
   </channel>

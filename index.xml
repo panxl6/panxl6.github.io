@@ -48,69 +48,6 @@
     </item>
     
     <item>
-      <title>Go语言RESTful API开发实战</title>
-      <link>http://localhost:1313/post/golang-restful-api/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/golang-restful-api/</guid>
-      <description>&lt;p&gt;如今微服务、无服务器架构大行其道。而API开发是这些话题的主角。 Go语言开发效率要比Java Spring要快一些，性能上比PHP高出一个数量级。尤其是Go语言在并发方便非常的优秀，是2017年值得关注的一门语言。 本文通过一个经典的Todo应用来介绍使用Go语言开发API。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>PHP数据导出功能优化案例</title>
-      <link>http://localhost:1313/post/classical-export-by-php/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/classical-export-by-php/</guid>
-      <description>&lt;p&gt;本文以一个Excel表单导出功能的演化路线为示例，分享导出任务的通用模式、Reactor和Worker分离的思路等经验。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>PHP是世界上最好语言吗？</title>
-      <link>http://localhost:1313/post/php-why-or-why-not/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/php-why-or-why-not/</guid>
-      <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>ubuntu下安装HHVM</title>
-      <link>http://localhost:1313/post/hhvm-installation/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/hhvm-installation/</guid>
-      <description>&lt;p&gt;为了更深入的理解PHP7，安装HHVM并学一下Hack语言。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>为什么你应该完全切换到Kotlin？</title>
-      <link>http://localhost:1313/post/why-kotlin/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/why-kotlin/</guid>
-      <description>&lt;p&gt;是时候开始使用现代的编程语言了!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>代码重定向</title>
-      <link>http://localhost:1313/post/code-redirect/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/code-redirect/</guid>
-      <description>&lt;p&gt;代码迁移和维护的一些技巧。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>开发环境的两种维护方式比较</title>
-      <link>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</guid>
-      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>归去来兮--github</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
@@ -129,9 +66,36 @@
     </item>
     
     <item>
+      <title>消息消费的几种方式</title>
+      <link>http://localhost:1313/post/how-to-consume-message/</link>
+      <pubDate>Tue, 06 Aug 2019 04:51:46 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/how-to-consume-message/</guid>
+      <description>&lt;p&gt;使用Crontab还是自己写多进程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>开发环境的两种维护方式比较</title>
+      <link>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</link>
+      <pubDate>Fri, 05 Jul 2019 08:02:10 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</guid>
+      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP是世界上最好语言吗？</title>
+      <link>http://localhost:1313/post/php-why-or-why-not/</link>
+      <pubDate>Sat, 04 May 2019 11:26:32 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/php-why-or-why-not/</guid>
+      <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>教你从零开始写一个哈希表</title>
       <link>http://localhost:1313/post/learning-hash-table-hash-glance/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-hash-glance/</guid>
       <description>&lt;p&gt;完整的实现，大概200行代码。这个教程读完需要一到两个小时。&lt;/p&gt;</description>
@@ -140,7 +104,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希冲突</title>
       <link>http://localhost:1313/post/learning-hash-table-collision/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-collision/</guid>
       <description>&lt;p&gt;哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。&lt;/p&gt;</description>
@@ -149,7 +113,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希函数</title>
       <link>http://localhost:1313/post/learning-hash-table-resize/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-resize/</guid>
       <description>&lt;p&gt;高概率的冲突，会使哈希表的性能急剧下降。&lt;/p&gt;</description>
@@ -158,7 +122,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希表结构</title>
       <link>http://localhost:1313/post/learning-hash-table-api/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-api/</guid>
       <description>&lt;p&gt;哈希函数将会实现以下的API：插入、查找、删除、更新。&lt;/p&gt;</description>
@@ -167,7 +131,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希表结构</title>
       <link>http://localhost:1313/post/learning-hash-table-structure/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-structure/</guid>
       <description></description>
@@ -176,7 +140,7 @@
     <item>
       <title>教你从零开始写一个哈希表--导读</title>
       <link>http://localhost:1313/post/learning-hash-table-introduction/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-introduction/</guid>
       <description></description>
@@ -185,7 +149,7 @@
     <item>
       <title>教你从零开始写一个哈希表--调整大小</title>
       <link>http://localhost:1313/post/learning-hash-table-hash-function/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-hash-function/</guid>
       <description>&lt;p&gt;在这一节，我们来编写哈希函数。&lt;/p&gt;</description>
@@ -194,28 +158,64 @@
     <item>
       <title>教你从零开始写一个哈希表--附录</title>
       <link>http://localhost:1313/post/learning-hash-table-appendix/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-appendix/</guid>
       <description>&lt;p&gt;介绍常见的两种哈希冲突解决方案：链表法、开放寻址法&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>消息消费的几种方式</title>
-      <link>http://localhost:1313/post/how-to-consume-message/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <title>PHP数据导出功能优化案例</title>
+      <link>http://localhost:1313/post/classical-export-by-php/</link>
+      <pubDate>Fri, 24 Aug 2018 14:54:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/how-to-consume-message/</guid>
-      <description>&lt;p&gt;使用Crontab还是自己写多进程。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/classical-export-by-php/</guid>
+      <description>&lt;p&gt;本文以一个Excel表单导出功能的演化路线为示例，分享导出任务的通用模式、Reactor和Worker分离的思路等经验。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码重定向</title>
+      <link>http://localhost:1313/post/code-redirect/</link>
+      <pubDate>Tue, 14 Aug 2018 09:21:32 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/code-redirect/</guid>
+      <description>&lt;p&gt;代码迁移和维护的一些技巧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>码分复用</title>
       <link>http://localhost:1313/post/code-multiplex/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Fri, 05 Jan 2018 10:35:07 +0800</pubDate>
       
       <guid>http://localhost:1313/post/code-multiplex/</guid>
       <description>&lt;p&gt;关于代码复杂性的一些观点&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu下安装HHVM</title>
+      <link>http://localhost:1313/post/hhvm-installation/</link>
+      <pubDate>Wed, 27 Dec 2017 13:53:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hhvm-installation/</guid>
+      <description>&lt;p&gt;为了更深入的理解PHP7，安装HHVM并学一下Hack语言。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go语言RESTful API开发实战</title>
+      <link>http://localhost:1313/post/golang-restful-api/</link>
+      <pubDate>Sat, 16 Dec 2017 20:20:34 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/golang-restful-api/</guid>
+      <description>&lt;p&gt;如今微服务、无服务器架构大行其道。而API开发是这些话题的主角。 Go语言开发效率要比Java Spring要快一些，性能上比PHP高出一个数量级。尤其是Go语言在并发方便非常的优秀，是2017年值得关注的一门语言。 本文通过一个经典的Todo应用来介绍使用Go语言开发API。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>为什么你应该完全切换到Kotlin？</title>
+      <link>http://localhost:1313/post/why-kotlin/</link>
+      <pubDate>Fri, 14 Jul 2017 09:40:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/why-kotlin/</guid>
+      <description>&lt;p&gt;是时候开始使用现代的编程语言了!&lt;/p&gt;</description>
     </item>
     
   </channel>

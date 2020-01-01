@@ -6,24 +6,15 @@
     <description>Recent content in 数据结构 on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Sep 2019 22:17:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Dec 2018 12:52:55 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>PHP是世界上最好语言吗？</title>
-      <link>http://localhost:1313/post/php-why-or-why-not/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/php-why-or-why-not/</guid>
-      <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>教你从零开始写一个哈希表</title>
       <link>http://localhost:1313/post/learning-hash-table-hash-glance/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-hash-glance/</guid>
       <description>&lt;p&gt;完整的实现，大概200行代码。这个教程读完需要一到两个小时。&lt;/p&gt;</description>
@@ -32,7 +23,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希冲突</title>
       <link>http://localhost:1313/post/learning-hash-table-collision/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-collision/</guid>
       <description>&lt;p&gt;哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。&lt;/p&gt;</description>
@@ -41,7 +32,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希函数</title>
       <link>http://localhost:1313/post/learning-hash-table-resize/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-resize/</guid>
       <description>&lt;p&gt;高概率的冲突，会使哈希表的性能急剧下降。&lt;/p&gt;</description>
@@ -50,7 +41,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希表结构</title>
       <link>http://localhost:1313/post/learning-hash-table-api/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-api/</guid>
       <description>&lt;p&gt;哈希函数将会实现以下的API：插入、查找、删除、更新。&lt;/p&gt;</description>
@@ -59,7 +50,7 @@
     <item>
       <title>教你从零开始写一个哈希表--哈希表结构</title>
       <link>http://localhost:1313/post/learning-hash-table-structure/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-structure/</guid>
       <description></description>
@@ -68,7 +59,7 @@
     <item>
       <title>教你从零开始写一个哈希表--导读</title>
       <link>http://localhost:1313/post/learning-hash-table-introduction/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-introduction/</guid>
       <description></description>
@@ -77,7 +68,7 @@
     <item>
       <title>教你从零开始写一个哈希表--调整大小</title>
       <link>http://localhost:1313/post/learning-hash-table-hash-function/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-hash-function/</guid>
       <description>&lt;p&gt;在这一节，我们来编写哈希函数。&lt;/p&gt;</description>
@@ -86,7 +77,7 @@
     <item>
       <title>教你从零开始写一个哈希表--附录</title>
       <link>http://localhost:1313/post/learning-hash-table-appendix/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Sun, 16 Dec 2018 12:52:55 +0800</pubDate>
       
       <guid>http://localhost:1313/post/learning-hash-table-appendix/</guid>
       <description>&lt;p&gt;介绍常见的两种哈希冲突解决方案：链表法、开放寻址法&lt;/p&gt;</description>
@@ -95,7 +86,7 @@
     <item>
       <title>码分复用</title>
       <link>http://localhost:1313/post/code-multiplex/</link>
-      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      <pubDate>Fri, 05 Jan 2018 10:35:07 +0800</pubDate>
       
       <guid>http://localhost:1313/post/code-multiplex/</guid>
       <description>&lt;p&gt;关于代码复杂性的一些观点&lt;/p&gt;</description>
