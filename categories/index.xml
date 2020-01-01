@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 修行中</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Sep 2019 22:17:30 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>论文</title>
+      <link>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</link>
+      <pubDate>Tue, 10 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://localhost:1313/categories/golang/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>http://localhost:1313/categories/php/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://localhost:1313/categories/ubuntu/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

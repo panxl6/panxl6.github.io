@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>选型 on 修行中</title>
+    <link>http://localhost:1313/tags/%E9%80%89%E5%9E%8B/</link>
+    <description>Recent content in 选型 on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 20 Nov 2019 09:37:59 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E9%80%89%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>awesome compare系列</title>
+      <link>http://localhost:1313/post/awesome-compare/</link>
+      <pubDate>Wed, 20 Nov 2019 09:37:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/awesome-compare/</guid>
+      <description>&lt;p&gt;我们在技术选型的时候，为了认识各类技术栈在各个场景下的优劣，往往需要两者作比较。常见的就是A vs B的文章。为了快速查询，这里收集web开发相关概念的比较列表。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

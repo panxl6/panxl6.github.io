@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>关于函数参数的讨论 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。
+" /><meta name="keywords" content="panxl6, 博客, 架构" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="关于函数参数的讨论" />
+<meta property="og:description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" />
+<meta property="article:published_time" content="2019-12-07T21:42:01+08:00" />
+<meta property="article:modified_time" content="2019-12-07T21:42:01+08:00" />
+<meta itemprop="name" content="关于函数参数的讨论">
+<meta itemprop="description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。">
+<meta itemprop="datePublished" content="2019-12-07T21:42:01&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-07T21:42:01&#43;08:00" />
+<meta itemprop="wordCount" content="830">
+
+
+
+<meta itemprop="keywords" content="函数,编程文化," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关于函数参数的讨论"/>
+<meta name="twitter:description" content="函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">文章列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">文章列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">关于函数参数的讨论</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-07 </span>
+        
+          <span class="more-meta"> 约 830 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。</p>
+<h1 id="heading">参数的个数</h1>
+<h3 id="heading-1">没有入参，没有返回值</h3>
+<p>此时，函数不能跟其他代码块进行交互，退化成了一个指令。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">sayHello</span><span class="p">(</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">do something</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading-2">若干个入参，没有返回值</h3>
+<p>数据的消费者。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">saveLog</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">FILE</span> <span class="o">*</span><span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;</span><span class="s">log.txt</span><span class="s">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;</span><span class="s">w</span><span class="s">&#34;</span><span class="p">)</span><span class="p">;</span>
+    <span class="n">fwrite</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span><span class="p">;</span>
+    <span class="n">fclose</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading-3">没有入参，有返回值</h3>
+<p>数据的提供者。效果上相当于一个变量。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">function getConfig()
+{
+	return [1, 2, 3];
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading-4">多个参数</h3>
+<p>将参数平铺展开传入，是一个比较直观的方式。但是参数过多时，代码的可读性下降，扩展性下降。这个时候将参数打包成一个对象传参。大量参数传递时，一般分为两部分，控制参数和业务参数。参数个数太多时，参数的装箱和拆箱也是很麻烦的一件事情。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">
+function queryUserInfo($uid, $userName, $mobile, $nickname, $birthday, $pageSize, $pageNum)
+{
+	return [];
+}
+
+$param = [
+    // 分页控制参数
+    &#39;page_size&#39; =&gt; $pageSize,
+    &#39;page_num&#39; =&gt; $pageNum,
+
+    // 业务查询参数
+    &#39;uid&#39; =&gt; $uid,
+    &#39;user_name&#39; =&gt; $userName,
+    &#39;nickname&#39; =&gt; $nickname,
+    &#39;birthday&#39; =&gt; $birthday
+];
+function queryUserInfo($param)
+{
+}
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>可变长度参数</strong>
+将多个参数打包，虽然提升了扩展性，但是使用不太方便，容易导致代码的膨胀。可变参数提供了一个折中的方案。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">printf(&#34;%s&#34;, &#39;hello world&#39;);
+printf(&#34;%s %s&#34;, &#39;hello&#39;, &#39;world&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><p>传递大量的参数的函数，往往是一个大而全的混杂函数。我们可以把它拆分为一个系列函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">function queryUserInfoByMobile($mobile)
+{
+}
+
+function queryUserInfoByUserName($userName)
+{
+}
+// ....
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading-5">入参的值问题</h3>
+<p>对于一些控制参数，其取值范围可能较小，而且变动也不大。这个时候，可以使用参数默认值，以减少一些模板代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">function queryUserInfoByMobile($mobile, $pageNum, $pageSize)
+{
+}
+$mobile = &#39;134xxx&#39;;
+$pageNum = 1;
+$pageSize = 10;
+queryUserInfoByMobile($mobile, $pageNum, $pageSize);
+
+function queryUserInfoByMobile($mobile, $pageNum, $pageSize=10)
+{
+}
+$mobile = &#39;134xxx&#39;;
+$pageNum = 1;
+queryUserInfoByMobile($mobile, $pageNum);
+</code></pre></td></tr></table>
+</div>
+</div><p>控制参数的值，往往是要定义成枚举值的。如果一些参数的值范围较大，枚举值的数量比较多。如果我们使用位的组合来产生更广泛的值域，这样可以减少冗余的代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">$data = [];
+json_encode($data, JSON_UNESCAPED_SLASHES);
+json_encode($data, JSON_UNESCAPED_UNICODE);
+json_encode($data, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading-6">数据的隔离</h3>
+<p>以上讨论的函数，是不依赖于上下文执行的纯函数。这些函数可以重复执行。代加工的数据只从入参获取，加工后的数据只通过返回值传递。
+而函数可以通过其他的方式获取数据，从而打破了函数对数据的隔离。比如，通过参数引用、通过进程间通信、通过函数闭包、通过全局变量获取数据、通过网络获取数据、通过系统调用获取数据等。</p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%87%BD%E6%95%B0/">函数</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%96%87%E5%8C%96/">编程文化</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/b%E7%AB%AF%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/">
+            <span class="next-text nav-default">B端产品的特点及开发经验</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/" class="leancloud_visitors" data-flag-title="关于函数参数的讨论">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  true ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

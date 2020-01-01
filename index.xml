@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>修行中</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 07 Dec 2019 21:42:01 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于函数参数的讨论</title>
+      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/</link>
+      <pubDate>Sat, 07 Dec 2019 21:42:01 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/</guid>
+      <description>&lt;p&gt;函数的参数传递方式，影响着我们复用代码的方式。本文讨论函数参数传递的几种方式。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>B端产品的特点及开发经验</title>
+      <link>http://localhost:1313/post/b%E7%AB%AF%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Thu, 28 Nov 2019 20:55:26 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/b%E7%AB%AF%E4%BA%A7%E5%93%81%E7%9A%84%E7%89%B9%E7%82%B9%E5%8F%8A%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/</guid>
+      <description>&lt;p&gt;To B or not To B, that is a question. 企业服务跟消费服务应用的开发有哪些差别呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>awesome compare系列</title>
+      <link>http://localhost:1313/post/awesome-compare/</link>
+      <pubDate>Wed, 20 Nov 2019 09:37:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/awesome-compare/</guid>
+      <description>&lt;p&gt;我们在技术选型的时候，为了认识各类技术栈在各个场景下的优劣，往往需要两者作比较。常见的就是A vs B的文章。为了快速查询，这里收集web开发相关概念的比较列表。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>有助于构建程序世界底层认知的论文</title>
+      <link>http://localhost:1313/post/paper-for-me/</link>
+      <pubDate>Tue, 10 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/paper-for-me/</guid>
+      <description>&lt;p&gt;一篇论文，一个领域，一种思想。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go语言RESTful API开发实战</title>
+      <link>http://localhost:1313/post/golang-restful-api/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/golang-restful-api/</guid>
+      <description>&lt;p&gt;如今微服务、无服务器架构大行其道。而API开发是这些话题的主角。 Go语言开发效率要比Java Spring要快一些，性能上比PHP高出一个数量级。尤其是Go语言在并发方便非常的优秀，是2017年值得关注的一门语言。 本文通过一个经典的Todo应用来介绍使用Go语言开发API。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP数据导出功能优化案例</title>
+      <link>http://localhost:1313/post/classical-export-by-php/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/classical-export-by-php/</guid>
+      <description>&lt;p&gt;本文以一个Excel表单导出功能的演化路线为示例，分享导出任务的通用模式、Reactor和Worker分离的思路等经验。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP是世界上最好语言吗？</title>
+      <link>http://localhost:1313/post/php-why-or-why-not/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/php-why-or-why-not/</guid>
+      <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu下安装HHVM</title>
+      <link>http://localhost:1313/post/hhvm-installation/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hhvm-installation/</guid>
+      <description>&lt;p&gt;为了更深入的理解PHP7，安装HHVM并学一下Hack语言。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>为什么你应该完全切换到Kotlin？</title>
+      <link>http://localhost:1313/post/why-kotlin/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/why-kotlin/</guid>
+      <description>&lt;p&gt;是时候开始使用现代的编程语言了!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码重定向</title>
+      <link>http://localhost:1313/post/code-redirect/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/code-redirect/</guid>
+      <description>&lt;p&gt;代码迁移和维护的一些技巧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>开发环境的两种维护方式比较</title>
+      <link>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-difference-maintain-of-development-enviroment/</guid>
+      <description>&lt;p&gt;维护一套公用的开发环境，还是每个人自己搭？这是一个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>归去来兮--github</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;为何再次回到Github&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>归去来兮--github</title>
+      <link>http://localhost:1313/post/about/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/about/</guid>
+      <description>&lt;p&gt;为何再次回到Github&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表</title>
+      <link>http://localhost:1313/post/learning-hash-table-hash-glance/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-hash-glance/</guid>
+      <description>&lt;p&gt;完整的实现，大概200行代码。这个教程读完需要一到两个小时。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希冲突</title>
+      <link>http://localhost:1313/post/learning-hash-table-collision/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-collision/</guid>
+      <description>&lt;p&gt;哈希函数把一个无穷大的输入集合映射到一个有限大小的输出集合。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希函数</title>
+      <link>http://localhost:1313/post/learning-hash-table-resize/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-resize/</guid>
+      <description>&lt;p&gt;高概率的冲突，会使哈希表的性能急剧下降。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希表结构</title>
+      <link>http://localhost:1313/post/learning-hash-table-api/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-api/</guid>
+      <description>&lt;p&gt;哈希函数将会实现以下的API：插入、查找、删除、更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--哈希表结构</title>
+      <link>http://localhost:1313/post/learning-hash-table-structure/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--导读</title>
+      <link>http://localhost:1313/post/learning-hash-table-introduction/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--调整大小</title>
+      <link>http://localhost:1313/post/learning-hash-table-hash-function/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-hash-function/</guid>
+      <description>&lt;p&gt;在这一节，我们来编写哈希函数。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>教你从零开始写一个哈希表--附录</title>
+      <link>http://localhost:1313/post/learning-hash-table-appendix/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/learning-hash-table-appendix/</guid>
+      <description>&lt;p&gt;介绍常见的两种哈希冲突解决方案：链表法、开放寻址法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>消息消费的几种方式</title>
+      <link>http://localhost:1313/post/how-to-consume-message/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/how-to-consume-message/</guid>
+      <description>&lt;p&gt;使用Crontab还是自己写多进程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>码分复用</title>
+      <link>http://localhost:1313/post/code-multiplex/</link>
+      <pubDate>Sun, 01 Sep 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/code-multiplex/</guid>
+      <description>&lt;p&gt;关于代码复杂性的一些观点&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
