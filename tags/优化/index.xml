@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>优化 on 修行中</title>
-    <link>http://localhost:1313/tags/%E4%BC%98%E5%8C%96/</link>
+    <link>https://panxl6.github.io/tags/%E4%BC%98%E5%8C%96/</link>
     <description>Recent content in 优化 on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 29 Dec 2019 22:17:30 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://panxl6.github.io/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>慢SQL优化总结</title>
-      <link>http://localhost:1313/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</link>
+      <link>https://panxl6.github.io/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</link>
       <pubDate>Sun, 29 Dec 2019 22:17:30 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://panxl6.github.io/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</guid>
       <description>&lt;p&gt;慢SQL优化，是性能优化中跟编程语言无关，也是见效比较快的环节。&lt;/p&gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PHP7 on 修行中</title>
-    <link>http://localhost:1313/tags/php7/</link>
+    <link>https://panxl6.github.io/tags/php7/</link>
     <description>Recent content in PHP7 on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 27 Dec 2017 13:53:47 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/php7/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://panxl6.github.io/tags/php7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ubuntu下安装HHVM</title>
-      <link>http://localhost:1313/post/hhvm-installation/</link>
+      <link>https://panxl6.github.io/post/hhvm-installation/</link>
       <pubDate>Wed, 27 Dec 2017 13:53:47 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/hhvm-installation/</guid>
+      <guid>https://panxl6.github.io/post/hhvm-installation/</guid>
       <description>&lt;p&gt;为了更深入的理解PHP7，安装HHVM并学一下Hack语言。&lt;/p&gt;</description>
     </item>
     

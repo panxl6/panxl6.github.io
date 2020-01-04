@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on 修行中</title>
-    <link>http://localhost:1313/categories/golang/</link>
+    <link>https://panxl6.github.io/categories/golang/</link>
     <description>Recent content in Golang on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 16 Dec 2017 20:20:34 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://panxl6.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go语言RESTful API开发实战</title>
-      <link>http://localhost:1313/post/golang-restful-api/</link>
+      <link>https://panxl6.github.io/post/golang-restful-api/</link>
       <pubDate>Sat, 16 Dec 2017 20:20:34 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/golang-restful-api/</guid>
+      <guid>https://panxl6.github.io/post/golang-restful-api/</guid>
       <description>&lt;p&gt;如今微服务、无服务器架构大行其道。而API开发是这些话题的主角。 Go语言开发效率要比Java Spring要快一些，性能上比PHP高出一个数量级。尤其是Go语言在并发方便非常的优秀，是2017年值得关注的一门语言。 本文通过一个经典的Todo应用来介绍使用Go语言开发API。&lt;/p&gt;</description>
     </item>
     

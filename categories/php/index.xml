@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PHP on 修行中</title>
-    <link>http://localhost:1313/categories/php/</link>
+    <link>https://panxl6.github.io/categories/php/</link>
     <description>Recent content in PHP on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 May 2019 11:26:32 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://panxl6.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PHP是世界上最好语言吗？</title>
-      <link>http://localhost:1313/post/php-why-or-why-not/</link>
+      <link>https://panxl6.github.io/post/php-why-or-why-not/</link>
       <pubDate>Sat, 04 May 2019 11:26:32 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/php-why-or-why-not/</guid>
+      <guid>https://panxl6.github.io/post/php-why-or-why-not/</guid>
       <description>&lt;p&gt;PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>PHP数据导出功能优化案例</title>
-      <link>http://localhost:1313/post/classical-export-by-php/</link>
+      <link>https://panxl6.github.io/post/classical-export-by-php/</link>
       <pubDate>Fri, 24 Aug 2018 14:54:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/classical-export-by-php/</guid>
+      <guid>https://panxl6.github.io/post/classical-export-by-php/</guid>
       <description>&lt;p&gt;本文以一个Excel表单导出功能的演化路线为示例，分享导出任务的通用模式、Reactor和Worker分离的思路等经验。&lt;/p&gt;</description>
     </item>
     
