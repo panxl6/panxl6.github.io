@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Dec 2019 21:42:01 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Dec 2019 22:17:30 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>慢SQL优化总结</title>
+      <link>http://localhost:1313/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Sun, 29 Dec 2019 22:17:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</guid>
+      <description>&lt;p&gt;慢SQL优化，是性能优化中跟编程语言无关，也是见效比较快的环节。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>关于函数参数的讨论</title>

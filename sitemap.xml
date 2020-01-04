@@ -3,21 +3,42 @@
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2019-12-07T21:42:01+08:00</lastmod>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/sql/</loc>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2019-12-07T21:42:01+08:00</lastmod>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2019-12-07T21:42:01+08:00</lastmod>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2019-12-29T22:17:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -107,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E8%AE%BA%E6%96%87/</loc>
+    <loc>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2019-09-10T22:17:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</loc>
+    <loc>http://localhost:1313/tags/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2019-09-10T22:17:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -247,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2018-12-16T12:52:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2018-12-16T12:52:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -338,14 +359,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/golang/</loc>
+    <loc>http://localhost:1313/tags/golang/</loc>
     <lastmod>2017-12-16T20:20:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/golang/</loc>
+    <loc>http://localhost:1313/categories/golang/</loc>
     <lastmod>2017-12-16T20:20:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
