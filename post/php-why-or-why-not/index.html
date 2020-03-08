@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://panxl6.github.io/post/php-why-or-why-not/" />
 <meta property="article:published_time" content="2019-05-04T11:26:32+08:00" />
-<meta property="article:modified_time" content="2019-05-04T11:26:32+08:00" />
+<meta property="article:modified_time" content="2020-03-08T11:26:32+08:00" />
 <meta itemprop="name" content="PHP是世界上最好语言吗？">
 <meta itemprop="description" content="PHP大有跌出2019年编程语言Top 10的趋势。廉颇老矣，尚能饭否？">
 <meta itemprop="datePublished" content="2019-05-04T11:26:32&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-04T11:26:32&#43;08:00" />
-<meta itemprop="wordCount" content="5941">
+<meta itemprop="dateModified" content="2020-03-08T11:26:32&#43;08:00" />
+<meta itemprop="wordCount" content="6169">
 
 
 
@@ -121,8 +121,8 @@
         <div class="post-category">
             <a href="/categories/php/"> PHP </a>
             </div>
-          <span class="more-meta"> 约 5941 字 </span>
-          <span class="more-meta"> 预计阅读 12 分钟 </span>
+          <span class="more-meta"> 约 6169 字 </span>
+          <span class="more-meta"> 预计阅读 13 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -155,7 +155,8 @@
         <li><a href="#php7php5">为什么PHP7要比PHP5的性能好？</a></li>
         <li><a href="#heading-14">万能的数组：成也萧何，败也萧何</a></li>
         <li><a href="#php-3">PHP扩展开发，真香？还是鸡肋？</a></li>
-        <li><a href="#heading-15">参考文献</a></li>
+        <li><a href="#heading-15">关于生态</a></li>
+        <li><a href="#heading-16">参考文献</a></li>
       </ul>
     </li>
   </ul>
@@ -831,7 +832,10 @@ PHP Parse error:  syntax error, unexpected &#39;$a&#39; (T_VARIABLE) in /home/ub
 <p>PHP的维护者，更像是一群个体户。而Java的官方组织，更像是一家大企业。两者的差别导致了很多的问题。比如，前面提到的PHP库函数命名混乱，还有PHP发版时间不确定，而且更新升级较为缓慢等问题。</p>
 <p>增强PHP，或者改造PHP是一件做出来容易，做好很难的事情。你用C语言写了PHP扩展，后续的维护呢？比如swoole，swoole扩展要开发，php使用者也要更新自己的知识。这不见得省事。</p>
 <p>我们换一个思路，如果我们用Go语言来开发PHP扩展（比如swoole），那么扩展开发的效率要比用C语言时高一些。但是增强后的php的业务开发效率，跟Go语言开发业务的效率差别就不太大了。那么我们得到结论是，直接使用Go语言来开发业务，而不是PHP。</p>
-<h3 id="heading-15">参考文献</h3>
+<h3 id="heading-15">关于生态</h3>
+<p>在复用现有代码基的方式上，PHP的方式并没那么直接。C++在语法上就包含了C语言作为自己的子集。所以，C语言的丰富资产都可以为其所用。golang虽然在语法上不支持C语言，但是通过FFI(Foreign Function Interface)可以直接使用C语言的代码库。但是PHP必须以扩展的形式使用。你必须重新封装、开发现有的代码。而且扩展的推广也会造成阻力。</p>
+<p>JAVA虽然不能直接利用C语言的代码，但是其本身的吸引力很大，在jvm的生态上诞生或者移植了很多的方言。</p>
+<h3 id="heading-16">参考文献</h3>
 <ol>
 <li><a href="https://slack.engineering/taking-php-seriously-cf7a60065329">taking php serious</a></li>
 <li><a href="https://php.net">php.net</a></li>
