@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on 修行中</title>
+    <link>https://panxl6.github.io/tags/github/</link>
+    <description>Recent content in github on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 07 Mar 2020 22:17:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何在本机配置多个github的sshkey</title>
+      <link>https://panxl6.github.io/post/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgithub%E7%9A%84sshkey/</link>
+      <pubDate>Sat, 07 Mar 2020 22:17:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgithub%E7%9A%84sshkey/</guid>
+      <description>当我们想要在一台机器上开发多个不同的github项目时，我们就需要配置多个不同的公钥。github站点限制了一个ssh公钥只能在一个仓库用一</description>
+    </item>
+    
+  </channel>
+</rss>

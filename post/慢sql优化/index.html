@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://panxl6.github.io/post/%E6%85%A2sql%E4%BC%98%E5%8C%96/" />
 <meta property="article:published_time" content="2019-12-29T22:17:30+08:00" />
-<meta property="article:modified_time" content="2019-12-29T22:17:30+08:00" />
+<meta property="article:modified_time" content="2020-01-04T12:02:30+08:00" />
 <meta itemprop="name" content="慢SQL优化总结">
 <meta itemprop="description" content="慢SQL优化，是性能优化中跟编程语言无关，也是见效比较快的环节。">
 <meta itemprop="datePublished" content="2019-12-29T22:17:30&#43;08:00" />
-<meta itemprop="dateModified" content="2019-12-29T22:17:30&#43;08:00" />
-<meta itemprop="wordCount" content="1950">
+<meta itemprop="dateModified" content="2020-01-04T12:02:30&#43;08:00" />
+<meta itemprop="wordCount" content="1948">
 
 
 
@@ -119,7 +119,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-12-29 </span>
         
-          <span class="more-meta"> 约 1950 字 </span>
+          <span class="more-meta"> 约 1948 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -129,7 +129,7 @@
     <div class="post-content">
       <p>慢SQL优化，是性能优化中跟编程语言无关，也是见效比较快的环节。</p>
 <blockquote>
-<p>　　一个SQL执行时间过长，长期占用MySQL会话连接，会耗尽连接数。这样其他请求就无法建立连接。一个SQL返回时间过长，对用户体验也会造成影响。另外，慢SQL会消耗数据库实例的资源，进一步把其他正常SQL也变成慢SQL。可能造成数据库实例失去响应。毕竟，雪崩的时候，没有没有一片雪花是无辜的。</p>
+<p>　　一个SQL执行时间过长，长期占用MySQL会话连接，会耗尽连接数。这样其他请求就无法建立连接。一个SQL返回时间过长，对用户体验也会造成影响。另外，慢SQL会消耗数据库实例的资源，进一步把其他正常SQL也变成慢SQL。可能造成数据库实例失去响应。毕竟，雪崩的时候，没有一片雪花是无辜的。</p>
 <p>　　代码层面的优化，受不同的编程语言、技术选型等因素的影响，解决方案也会有一定的差异。但是SQL优化则具备比较高的通用性。虽然不同厂商实现的数据库管理软件在执行SQL时会有一定的差异，但是都基于标准SQL。</p>
 </blockquote>
 <h2 id="sql">慢SQL的判定</h2>
@@ -201,7 +201,11 @@ SQL的调试不像静态编程语言调试那样，可以设置断点。在MySQL
           <a href="/tags/%E4%BC%98%E5%8C%96/">优化</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgithub%E7%9A%84sshkey/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">如何在本机配置多个github的sshkey</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/post/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E8%AE%A8%E8%AE%BA/">
             <span class="next-text nav-default">关于函数参数的讨论</span>
             <span class="next-text nav-mobile">下一篇</span>
