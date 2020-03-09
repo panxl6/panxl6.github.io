@@ -6,10 +6,19 @@
     <description>Recent content on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Mar 2020 22:17:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 16:06:26 +0800</lastBuildDate>
     
 	<atom:link href="https://panxl6.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何吃自己的狗粮</title>
+      <link>https://panxl6.github.io/post/%E5%A6%82%E4%BD%95%E5%90%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
+      <pubDate>Sun, 08 Mar 2020 16:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/%E5%A6%82%E4%BD%95%E5%90%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
+      <description>吃自己的狗粮，是硅谷公司倡导的一个理念。自己使用自己的产品。这样做的一个用处什么呢？对于一个普通的个人开发者来说，这样做可以提升对产品思考。</description>
+    </item>
     
     <item>
       <title>如何在本机配置多个github的sshkey</title>
