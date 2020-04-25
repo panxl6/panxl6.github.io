@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on 修行中</title>
+    <link>https://panxl6.github.io/tags/redis/</link>
+    <description>Recent content in Redis on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 21 Apr 2020 10:06:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis知识梳理</title>
+      <link>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Tue, 21 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

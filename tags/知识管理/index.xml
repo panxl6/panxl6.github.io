@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>知识管理 on 修行中</title>
+    <link>https://panxl6.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 知识管理 on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 21 Apr 2020 10:06:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis知识梳理</title>
+      <link>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Tue, 21 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP知识回顾</title>
+      <link>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</link>
+      <pubDate>Sun, 05 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</guid>
+      <description>PHP是我目前使用时间最长的一门语言。未来会转向Go、Java或者C++一类的静态语言。在这里总结一下自己的学习收获和体会。 为什么会是PHP</description>
+    </item>
+    
+  </channel>
+</rss>

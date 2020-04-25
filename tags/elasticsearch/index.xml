@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ElasticSearch on 修行中</title>
+    <link>https://panxl6.github.io/tags/elasticsearch/</link>
+    <description>Recent content in ElasticSearch on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2020 10:06:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ElastiSearch</title>
+      <link>https://panxl6.github.io/post/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sun, 05 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</guid>
+      <description>一个应用的数据越来越大的时候，就会需要使用搜索功能。 用户的注意力的是有限的。当你使用APP来做一件事情的时候，往往是这样的一个模式：功能入口</description>
+    </item>
+    
+  </channel>
+</rss>

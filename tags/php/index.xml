@@ -6,10 +6,19 @@
     <description>Recent content in PHP on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 May 2019 11:26:32 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 10:06:26 +0800</lastBuildDate>
     
 	<atom:link href="https://panxl6.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP知识回顾</title>
+      <link>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</link>
+      <pubDate>Sun, 05 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</guid>
+      <description>PHP是我目前使用时间最长的一门语言。未来会转向Go、Java或者C++一类的静态语言。在这里总结一下自己的学习收获和体会。 为什么会是PHP</description>
+    </item>
     
     <item>
       <title>PHP是世界上最好语言吗？</title>

@@ -6,10 +6,82 @@
     <description>Recent content in Posts on 修行中</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Mar 2020 16:06:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 20:55:30 +0800</lastBuildDate>
     
 	<atom:link href="https://panxl6.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020年4月24日一面</title>
+      <link>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%8824%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 24 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%8824%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;腾讯教育后端开发面试记录&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MySQL5.7编译过程记录</title>
+      <link>https://panxl6.github.io/post/mysql5.7%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 23 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/mysql5.7%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;记录从源码编译MySQL的过程&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Redis知识梳理</title>
+      <link>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Tue, 21 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL知识梳理</title>
+      <link>https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Thu, 16 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</guid>
+      <description>&lt;p&gt;MySQL知多少&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020年4月9日一面</title>
+      <link>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%889%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 09 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%889%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;TEG研发管理后端开发杠面试记录&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ElastiSearch</title>
+      <link>https://panxl6.github.io/post/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sun, 05 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</guid>
+      <description>一个应用的数据越来越大的时候，就会需要使用搜索功能。 用户的注意力的是有限的。当你使用APP来做一件事情的时候，往往是这样的一个模式：功能入口</description>
+    </item>
+    
+    <item>
+      <title>PHP知识回顾</title>
+      <link>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</link>
+      <pubDate>Sun, 05 Apr 2020 10:06:26 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/php%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/</guid>
+      <description>PHP是我目前使用时间最长的一门语言。未来会转向Go、Java或者C++一类的静态语言。在这里总结一下自己的学习收获和体会。 为什么会是PHP</description>
+    </item>
+    
+    <item>
+      <title>《Go语言并发之道》读书笔记</title>
+      <link>https://panxl6.github.io/post/go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E4%B9%8B%E9%81%93%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 29 Mar 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E4%B9%8B%E9%81%93%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>Go语言提供了一个简单、廉价的并发能力。这种并发的能力好不好用？该如何用？ 一个channel怎么用？ 多个channel怎么组合？有哪几种模式</description>
+    </item>
     
     <item>
       <title>如何吃自己的狗粮</title>
@@ -26,7 +98,7 @@
       <pubDate>Sat, 07 Mar 2020 22:17:30 +0800</pubDate>
       
       <guid>https://panxl6.github.io/post/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgithub%E7%9A%84sshkey/</guid>
-      <description>当我们想要在一台机器上开发多个不同的github项目时，我们就需要配置多个不同的公钥。github站点限制了一个ssh公钥只能在一个仓库用一</description>
+      <description>&lt;p&gt;如何解决&lt;code&gt;Key is already in use&lt;/code&gt;报错&lt;/p&gt;</description>
     </item>
     
     <item>

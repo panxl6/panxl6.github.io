@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安装 on 修行中</title>
+    <link>https://panxl6.github.io/tags/%E5%AE%89%E8%A3%85/</link>
+    <description>Recent content in 安装 on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 23 Apr 2020 20:55:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL5.7编译过程记录</title>
+      <link>https://panxl6.github.io/post/mysql5.7%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 23 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/mysql5.7%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;记录从源码编译MySQL的过程&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

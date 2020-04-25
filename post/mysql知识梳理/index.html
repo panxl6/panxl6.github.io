@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MySQL知识梳理 - 修行中</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="panxl6" /><meta name="description" content="MySQL知多少
+" /><meta name="keywords" content="panxl6, 博客, 架构" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MySQL知识梳理" />
+<meta property="og:description" content="MySQL知多少" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" />
+<meta property="article:published_time" content="2020-04-16T20:55:30+08:00" />
+<meta property="article:modified_time" content="2020-04-16T20:55:30+08:00" />
+<meta itemprop="name" content="MySQL知识梳理">
+<meta itemprop="description" content="MySQL知多少">
+<meta itemprop="datePublished" content="2020-04-16T20:55:30&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-16T20:55:30&#43;08:00" />
+<meta itemprop="wordCount" content="4445">
+
+
+
+<meta itemprop="keywords" content="面试," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MySQL知识梳理"/>
+<meta name="twitter:description" content="MySQL知多少"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">修行中</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">文章列表</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">修行中</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">文章列表</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MySQL知识梳理</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-16 </span>
+        
+          <span class="more-meta"> 约 4445 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#myisaminnodb">MyIsam和Innodb的区别</a></li>
+    <li><a href="#mysql">从逻辑角度分，MySQL有哪几种类型的索引</a></li>
+    <li><a href="#heading-1">主键和唯一索引的区别</a></li>
+    <li><a href="#mysql-1">MySQL查询时最终会选择几个索引？为什么？</a></li>
+    <li><a href="#heading-2">创建索引的时候要考虑那些东西？（你如何设计索引）</a></li>
+    <li><a href="#heading-3">什么情况下会发生明明创建了索引，但是执行的时候并没有通过索引呢?</a></li>
+    <li><a href="#mysql-2">MySQL的索引实现有哪几种数据结构？</a></li>
+    <li><a href="#b">画出B+树的结构示意图</a></li>
+    <li><a href="#heading-4">查找算法串讲</a></li>
+    <li><a href="#heading-5">索引结构延伸问题串讲</a></li>
+    <li><a href="#bhash">B+树索引跟Hash索引的区别（比较）</a></li>
+    <li><a href="#heading-6">聚集索引和非聚集索引的区别</a></li>
+    <li><a href="#heading-7">事务的特点</a></li>
+    <li><a href="#heading-8">事务的隔离等级</a></li>
+    <li><a href="#heading-9">事务的是如何实现的</a></li>
+    <li><a href="#heading-10">行锁和表锁的区别</a></li>
+    <li><a href="#heading-11">如何加锁</a></li>
+    <li><a href="#mysql-3">什么是死锁？MySQL是如何处理死锁的？</a></li>
+    <li><a href="#heading-12">乐观锁和悲观锁分别是如何实现的？</a></li>
+    <li><a href="#mysqlmvcc">MySQL中的多版本并发控制实现(MVCC)</a></li>
+    <li><a href="#heading-13">描述贵公司所使用的的数据库架构</a></li>
+    <li><a href="#heading-14">主从复制延迟有哪些原因？</a></li>
+    <li><a href="#heading-15">如何解决主从复制延迟？</a></li>
+    <li><a href="#sqlsql">一条SQL的生命周期，SQL提交到执行的全过程</a></li>
+    <li><a href="#mysqlpg">MySQL跟PG相比，有哪些优势？劣势？</a></li>
+    <li><a href="#sql">那些年，优化过的慢SQL</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>MySQL知多少</p>
+<h1 id="heading">问题列表</h1>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#MyIsam%E5%92%8CInnodb%E7%9A%84%E5%8C%BA%E5%88%AB">MyIsam和Innodb的区别</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#%E4%BB%8E%E9%80%BB%E8%BE%91%E8%A7%92%E5%BA%A6%E5%88%86%EF%BC%8CMySQL%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%B4%A2%E5%BC%95">从逻辑角度分，MySQL有哪几种类型的索引</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E7%9A%84%E5%8C%BA%E5%88%AB">主键和唯一索引的区别</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#MySQL%E6%9F%A5%E8%AF%A2%E6%97%B6%E6%9C%80%E7%BB%88%E4%BC%9A%E9%80%89%E6%8B%A9%E5%87%A0%E4%B8%AA%E7%B4%A2%E5%BC%95%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F">MySQL查询时最终会选择几个索引？为什么？</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#MySQL%E7%9A%84%E7%B4%A2%E5%BC%95%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9F">MySQL的索引实现有哪几种数据结构？</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%89%B9%E7%82%B9">事务的特点</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%AD%89%E7%BA%A7">事务的隔离等级</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84">事务的是如何实现的</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="#%E8%A1%8C%E9%94%81%E5%92%8C%E8%A1%A8%E9%94%81%E7%9A%84%E5%8C%BA%E5%88%AB">行锁和表锁的区别</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="myisaminnodb">MyIsam和Innodb的区别</h2>
+<table>
+<thead>
+<tr>
+<th>Innodb</th>
+<th>MyIsam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支持事务</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>最小支持行锁</td>
+<td>不支持行锁，只支持表锁</td>
+</tr>
+<tr>
+<td>5.6以前的版本不支持全文索引</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>5.1以后的版本，innodb是默认的存储引擎</td>
+<td>5.1 以前是默认存储引擎</td>
+</tr>
+<tr>
+<td>不保存表的具体行数</td>
+<td>用一个变量保存了整个表的行数</td>
+</tr>
+<tr>
+<td>支持外键</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>索引实现是聚簇索引</td>
+<td>非聚簇</td>
+</tr>
+<tr>
+<td>清空整个表时，InnoDB是一行一行的删除，效率非常慢</td>
+<td>MyISAM则会重建表</td>
+</tr>
+</tbody>
+</table>
+<p>MyISAM：如果执行大量的SELECT，MyISAM是更好的选择。
+InnoDB：如果你的数据执行大量的INSERT或UPDATE，出于性能方面的考虑，应该使用InnoDB表。
+MyISAM适合查询以及插入为主的应用，InnoDB适合频繁修改以及涉及到安全性较高的应用
+原因如下：</p>
+<p>MyISAM的索引和数据是分开的，并且索引是有压缩的，内存使用率就对应提高了不少。能加载更多索引，而Innodb是索引和数据是紧密捆绑的，没有使用压缩从而会造成Innodb比MyISAM体积庞大不小。
+MyIsam一个是索引文件，另外一个是数据文件，其中索引文件中的索引指向数据文件中的表数据。查到索引就可以直接读取数据。而Innodb需要回表查询。因为聚集索引，索引放在叶子结点。</p>
+<h2 id="mysql">从逻辑角度分，MySQL有哪几种类型的索引</h2>
+<ul>
+<li>主键索引</li>
+<li>唯一索引</li>
+<li>普通索引(单列索引)</li>
+<li>复合索引(多列索引)</li>
+<li>全文索引</li>
+<li>空间索引</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span> <span class="n">MySQL的主要索引类型</span>
+<span class="k">create</span> <span class="k">table</span> <span class="n">t_index</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span><span class="p">,</span>
+    <span class="n">mobile</span> <span class="nb">char</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="n">description</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="n">address</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+    
+    <span class="n">province</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="n">city</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+
+    <span class="k">primary</span> <span class="k">key</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">comment</span> <span class="s1">&#39;</span><span class="s1">主键索引</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="k">unique</span> <span class="k">key</span><span class="p">(</span><span class="o">`</span><span class="n">mobile</span><span class="o">`</span><span class="p">)</span> <span class="k">comment</span> <span class="s1">&#39;</span><span class="s1">唯一索引</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="n">fulltext</span><span class="p">(</span><span class="o">`</span><span class="n">description</span><span class="o">`</span><span class="p">)</span> <span class="k">comment</span> <span class="s1">&#39;</span><span class="s1">全文索引</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="k">key</span><span class="p">(</span><span class="o">`</span><span class="n">address</span><span class="o">`</span><span class="p">)</span> <span class="k">comment</span> <span class="s1">&#39;</span><span class="s1">单列索引</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="k">key</span><span class="p">(</span><span class="o">`</span><span class="n">province</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">city</span><span class="o">`</span><span class="p">)</span> <span class="k">comment</span> <span class="s1">&#39;</span><span class="s1">复合索引</span><span class="s1">&#39;</span>
+<span class="p">)</span> <span class="n">engine</span><span class="o">=</span><span class="n">innodb</span> <span class="k">default</span> <span class="n">charset</span> <span class="n">utf8mb4</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="heading-1">主键和唯一索引的区别</h2>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>主键</th>
+<th>唯一索引</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设计目的</td>
+<td>行记录的唯一编号</td>
+<td>去重</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>不能为null</td>
+<td>可以为null</td>
+</tr>
+<tr>
+<td>必要性</td>
+<td>每张表必须有主键</td>
+<td>可以没有</td>
+</tr>
+<tr>
+<td>业务特点</td>
+<td>一般是自增id</td>
+<td>无</td>
+</tr>
+<tr>
+<td></td>
+<td>可以作为外键</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mysql-1">MySQL查询时最终会选择几个索引？为什么？</h2>
+<p><a href="https://blog.csdn.net/caomiao2006/article/details/52144964">一条SQL执行的时候只能使用一个索引。但是在发生索引合并的情况下，可以使用多个索引。</a></p>
+<h2 id="heading-2">创建索引的时候要考虑那些东西？（你如何设计索引）</h2>
+<ul>
+<li>查询经常要用到的字段。</li>
+<li>一般在where跟order by中涉及到的列建立索引。</li>
+<li>需要连表(join操作)的字段。</li>
+<li>需要去重的字段，唯一索引</li>
+</ul>
+<p><strong>注意</strong></p>
+<ul>
+<li>字段的区分度尽可能要高。</li>
+<li>数据更新频繁的字段，不适合建索引。</li>
+</ul>
+<h2 id="heading-3">什么情况下会发生明明创建了索引，但是执行的时候并没有通过索引呢?</h2>
+<ul>
+<li>存在数据类型隐式转化</li>
+<li>is null</li>
+<li>使用了函数</li>
+<li>MySQL基于成本计算选择索引，如果走索引的成本跟全表扫描差不多就走全表扫描了。</li>
+</ul>
+<h2 id="mysql-2">MySQL的索引实现有哪几种数据结构？</h2>
+<p>MySQL中Innodb和MyIsam引擎支持B+tree索引，不支持 Hash 索引。但是Innodb引擎会监控对表的索引查找情况，如果符合条件，会自动建立哈希索引。用户无法显式的创建哈希索引。这个特性叫做<em>自适应哈希索引</em>。</p>
+<p>MySQL中的Memory引擎可以显式的创建哈希索引。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span> <span class="n">test</span><span class="p">;</span>
+<span class="k">create</span> <span class="k">table</span> <span class="n">t_hash_index</span> <span class="p">(</span>
+    <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="k">key</span> <span class="k">using</span> <span class="n">hash</span><span class="p">(</span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">engine</span><span class="o">=</span><span class="n">memory</span> <span class="k">default</span> <span class="n">charset</span> <span class="n">utf8mb4</span><span class="p">;</span>
+
+<span class="n">use</span> <span class="n">test</span><span class="p">;</span>
+<span class="k">show</span> <span class="k">index</span> <span class="k">from</span> <span class="n">t_hash_index</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="http://image.panxl.cn/1587265426894.png" alt="1587265426894.png"></p>
+<h2 id="b">画出B+树的结构示意图</h2>
+<p><img src="http://image.panxl.cn/b_plus_tree.jpg" alt="b_plus_tree.jpg"></p>
+<p><a href="https://blog.csdn.net/GitChat/article/details/78787837">扩展阅读</a></p>
+<h2 id="heading-4">查找算法串讲</h2>
+<ul>
+<li>为什么使用了索引就可以加快查找速度？如果不使用索引，就必须全表扫描，那么时间复杂度是O(n)。如果使用了索引，由于B+树是有序的，时间复杂度是O(lgN)。因此可以加快查找速度。</li>
+<li>为什么MySQL不使用B树存储索引？B树跟B+树的一个区别是，B树在节点保存了主键以外的数据，而B+树只在叶子节点保存数据，其他节点只保存指针跟主键。因此使用B+树，每个磁盘块能保存的节点信息更多，降低索引树的高度，从而减少IO操作。另一方面，还可以减少内存的使用。原因是，系统从磁盘读取数据到内存时是以磁盘块（block）为基本单位的，位于同一磁盘块中的数据会被一次性读取出来，而不是按需读取。查找过程中，即使被访问的行记录不是你要的，也会被读取到内存中。</li>
+<li>为什么MySQL不使用二叉树存储索引？一方面是二叉树的高度比较高，需要的IO操作次数比较多。另一方面是二叉树不平衡，如果退化成链表的话，性能影响严重。</li>
+<li>为什么MySQL不使用红黑树存储索引？</li>
+<li>顺序查找的时间复杂度是多少？平均查找长度是多少？时间复杂度是O(n)，平均查找长度是(n+1)/2。</li>
+</ul>
+<h2 id="heading-5">索引结构延伸问题串讲</h2>
+<ul>
+<li>varchar类型的长度设置的太大会有什么影响？</li>
+<li>为什么在MySQL中，推荐自增id作为主键？为什么使用uuid不好呢？</li>
+<li>字符串索引跟数字类型的索引有什么区别？字符串索引在索引树上两个节点比较会比较慢，数字类型的索引会快一些?</li>
+</ul>
+<h2 id="bhash">B+树索引跟Hash索引的区别（比较）</h2>
+<table>
+<thead>
+<tr>
+<th>B+树</th>
+<th>Hash索引</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可以进行范围查询</td>
+<td>只能进行等值查询</td>
+</tr>
+<tr>
+<td>可以利用索引进行Order by</td>
+<td>无法利用索引进行排序</td>
+</tr>
+<tr>
+<td></td>
+<td>不支持多列索引的最左匹配原则</td>
+</tr>
+<tr>
+<td></td>
+<td>在大量值重复的情况下，哈希索引的效率很低，因为存在哈希碰撞问题</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading-6">聚集索引和非聚集索引的区别</h2>
+<p><img src="http://image.panxl.cn/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f363733343132322d353563386165643739383665646263622e706e67" alt="聚集索引和非聚集索引的区别"></p>
+<h2 id="heading-7">事务的特点</h2>
+<p>一组操作要么全都执行，要么全都不执行。ACID：原子性、一致性、隔离性、持久性。</p>
+<h2 id="heading-8">事务的隔离等级</h2>
+<p>事务相当于SQL执行过程的命名空间，沙盒机制。<a href="https://www.ibm.com/developerworks/cn/opensource/os-mysql-transaction-isolation-levels-and-locks/index.html">相关实验</a></p>
+<table>
+<thead>
+<tr>
+<th>隔离等级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读未提交</td>
+<td>该隔离级别的事务会读到其它未提交事务的数据，此现象也称之为脏读。</td>
+</tr>
+<tr>
+<td>读已提交</td>
+<td>一个事务可以读取另一个已提交的事务，多次读取会造成不一样的结果，此现象称为不可重复读问题</td>
+</tr>
+<tr>
+<td>可重复读</td>
+<td>该隔离级别是 MySQL 默认的隔离级别。在同一个事务里，select 的结果是事务开始时时间点的状态，因此，同样的 select 操作读到的结果会是一致的，但是，会有幻读现象。MySQL 的 InnoDB 引擎可以通过 next-key locks 机制（参考下文&quot;行锁的算法&quot;一节）来避免幻读。</td>
+</tr>
+<tr>
+<td>序列化</td>
+<td>在该隔离级别下事务都是串行顺序执行的，MySQL 数据库的 InnoDB 引擎会给读操作隐式加一把读共享锁，从而避免了脏读、不可重读复读和幻读问题。</td>
+</tr>
+</tbody>
+</table>
+<p>隔离等级越高，数据越安全，数据一致性得到更高的保障。但是同时并发能力越差。</p>
+<blockquote>
+<p>MySQL 通过锁机制来保证事务的隔离性。锁机制使得在对数据库进行并发访问时，可以保障数据的完整性和一致性。</p>
+</blockquote>
+<h2 id="heading-9">事务的是如何实现的</h2>
+<p>MySQL 使用 redo log 来保证事务的持久性，通过锁来保证事务的隔离性。</p>
+<h2 id="heading-10">行锁和表锁的区别</h2>
+<p>表锁开销小，锁表快，但高并发下性能低。
+行锁开销大，锁表慢，但高并发下相比之下性能更高。</p>
+<p>InnoDB的行锁是针对索引加的锁，不是针对记录加的锁。并且该索引不能失效（或者查询的没有走索引），否则都会从行锁升级为表锁</p>
+<h2 id="heading-11">如何加锁</h2>
+<p>InnoDB 实现了两种类型的行级锁：</p>
+<p><strong>共享锁（也称为 S 锁）</strong>：允许事务读取一行数据。
+可以使用 SQL 语句 select * from tableName where … lock in share mode; 手动加 S 锁。</p>
+<p><strong>独占锁（也称为 X 锁）</strong>：允许事务删除或更新一行数据。
+可以使用 SQL 语句 select * from tableName where … for update; 手动加 X 锁。</p>
+<h2 id="mysql-3">什么是死锁？MySQL是如何处理死锁的？</h2>
+<p><strong>死锁</strong>
+死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于互相等待而造成的一种阻塞的现象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span> <span class="err">查</span><span class="err">看</span><span class="err">死</span><span class="err">锁</span>
+<span class="k">show</span> <span class="n">engine</span> <span class="n">innodb</span> <span class="n">status</span><span class="err">\</span><span class="k">G</span> <span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Innodb实现</strong></p>
+<p>InnoDB 引擎采取的是 wait-for graph 等待图的方法来自动检测死锁，如果发现死锁会自动回滚一个事务。</p>
+<p><strong>如何优化死锁问题</strong></p>
+<ul>
+<li>配置innodb_lock_wait_timeout 参数，减小锁定时间;</li>
+<li>减小锁定范围。合理设计索引，让 InnoDB 在索引键上面加锁的时候尽可能准确，尽可能的缩小锁定范围，避免造成不必要的锁定而影响其他 Query 的执行。</li>
+<li>尽可能减少基于范围的数据检索过滤条件，避免因为间隙锁带来的负面影响而锁定了不该锁定的记录。</li>
+<li>尽量控制事务的大小，减少锁定的资源量和锁定时间长度。</li>
+<li>在业务环境允许的情况下，尽量使用较低级别的事务隔离，以减少 MySQL 因为实现事务隔离级别所带来的附加成本。</li>
+</ul>
+<h2 id="heading-12">乐观锁和悲观锁分别是如何实现的？</h2>
+<p>悲观锁，指的是对数据被外界修改持保守态度。在数据处理的整个过程中，将数据处于锁定状态。一般是通过数据库提供的锁机制来实现。悲观锁能够保证数据的独占性，但是加锁和独占数据会造成性能问题。</p>
+<p>乐观锁，通过数据的版本记录来实现。比如，可以在代码中为每一行添加一个作为版本号的字段。MySQL中的事务隔离性正是通过MVCC来实现的。</p>
+<h2 id="mysqlmvcc">MySQL中的多版本并发控制实现(MVCC)</h2>
+<p>在InnoDB中，会在每行数据后添加两个额外的隐藏的值来实现MVCC，这两个值一个记录这行数据何时被创建，另外一个记录这行数据何时过期（或者被删除）。 在实际操作中，存储的并不是时间，而是事务的版本号，每开启一个新事务，事务的版本号就会递增。 在可重读Repeatable reads事务隔离级别下：</p>
+<p>SELECT时，读取创建版本号&lt;=当前事务版本号，删除版本号为空或&gt;当前事务版本号。
+INSERT时，保存当前事务版本号为行的创建版本号
+DELETE时，保存当前事务版本号为行的删除版本号
+UPDATE时，插入一条新纪录，保存当前事务版本号为行创建版本号，同时保存当前事务版本号到原来删除的行</p>
+<p><img src="http://image.panxl.cn/6eb5d3b1.png" alt="6eb5d3b1.png"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/64576887">MVCC实现机制扩展阅读</a></p>
+<h2 id="heading-13">描述贵公司所使用的的数据库架构</h2>
+<p><img src="http://image.panxl.cn/2020419212813.png" alt="2020419212813.png"></p>
+<h2 id="heading-14">主从复制延迟有哪些原因？</h2>
+<p><img src="http://image.panxl.cn/2020420215926.jpg" alt="2020420215926.jpg"></p>
+<p>从主从复制的过程来看，主库提供bin log，从库消费bin log。如果生产的日志远大于消费日志的速度，就会出现主从复制延迟。</p>
+<ul>
+<li>主库在短时间内存在大量的写入操作</li>
+<li>从库的配置低于主库</li>
+<li>从库的负载远高于从库</li>
+<li>主库和从库之间存在网络故障或者网络抖动</li>
+<li>从库事务锁定时间过长</li>
+</ul>
+<h2 id="heading-15">如何解决主从复制延迟？</h2>
+<p>从产生的原因逐个解决：</p>
+<p><strong>业务角度</strong></p>
+<ul>
+<li>操作增加消息队列，削峰填谷，减少数据波动</li>
+<li>将不重要的操作放在夜间执行</li>
+<li>先写入Redis，然后再将Redis的数据写入数据库</li>
+</ul>
+<p><strong>MySQL优化</strong></p>
+<ul>
+<li>增加从服务器，分散读操作的压力</li>
+<li>从库和主库保持一样的配置</li>
+<li>从库降低安全性，不必每秒都写入磁盘。innodb_flush_log_at_trx_commit 参数指定了 InnoDB 在事务提交后的日志写入频率。innodb_flush_log_at_trx_commit 设为0</li>
+<li>从库不写bin log，减轻负载</li>
+<li>基于语句的复制，切换到基于行的复制，</li>
+</ul>
+<h2 id="sqlsql">一条SQL的生命周期，SQL提交到执行的全过程</h2>
+<p><img src="http://image.panxl.cn/updateprocess.png" alt="updateprocess.png"></p>
+<h2 id="mysqlpg">MySQL跟PG相比，有哪些优势？劣势？</h2>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>MySQL</th>
+<th>Postgresql</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性能</td>
+<td>超过100万行就要分库分表</td>
+<td>性能上限比较高，日志上报平台1亿多行的记录查询依然很快</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>内存利用率高</td>
+<td>内存利用效率低(Postgres支持内核通过页面缓存自动存储最近访问磁盘的数据)</td>
+</tr>
+<tr>
+<td>并发</td>
+<td>使用线程</td>
+<td>使用进程，连接数上限低于MySQL</td>
+</tr>
+<tr>
+<td>索引</td>
+<td>支持聚簇索引。按主键查询，不需要回表</td>
+<td>使用堆索引，需要至少两次IO操作</td>
+</tr>
+<tr>
+<td>索引</td>
+<td></td>
+<td>支持json索引、函数索引、条件索引</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>支持文档对象操作</td>
+</tr>
+<tr>
+<td></td>
+<td>不需要垃圾回收</td>
+<td>PGsql实现的MVCC机制，导致需要过一段时间就要进行垃圾回收</td>
+</tr>
+<tr>
+<td>存储限制</td>
+<td></td>
+<td>支持存储大数据，表空间是TB级别的</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>支持许多复杂的数学函数，查询速度比MySQL快</td>
+</tr>
+<tr>
+<td></td>
+<td>提供了一些运维友好的慢SQL日志</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sql">那些年，优化过的慢SQL</h2>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/redis%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Redis知识梳理</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/2020%E5%B9%B44%E6%9C%889%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/">
+            <span class="next-text nav-default">2020年4月9日一面</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" class="leancloud_visitors" data-flag-title="MySQL知识梳理">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hD52ecNs9LewiK9lgMlpIOGK-gzGzoHsz',
+        appKey: 'FISvNDONvUuf8kjHqsAlW2KM',
+        notify:  true ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:sysupanxl6@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/panxl6" class="iconfont icon-github" title="github"></a>
+  <a href="https://panxl6.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">panxl6</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

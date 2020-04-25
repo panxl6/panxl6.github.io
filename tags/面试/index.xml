@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试 on 修行中</title>
+    <link>https://panxl6.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+    <description>Recent content in 面试 on 修行中</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Apr 2020 20:55:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://panxl6.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020年4月24日一面</title>
+      <link>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%8824%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 24 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%8824%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;腾讯教育后端开发面试记录&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MySQL知识梳理</title>
+      <link>https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Thu, 16 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/mysql%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</guid>
+      <description>&lt;p&gt;MySQL知多少&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020年4月9日一面</title>
+      <link>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%889%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 09 Apr 2020 20:55:30 +0800</pubDate>
+      
+      <guid>https://panxl6.github.io/post/2020%E5%B9%B44%E6%9C%889%E6%97%A5%E4%B8%80%E9%9D%A2%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;TEG研发管理后端开发杠面试记录&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
